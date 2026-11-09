@@ -1,0 +1,425 @@
+\chapter{Implicazioni organizzative della Direttiva NIS2}
+\label{cap:nis2}
+
+% 1.1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Confronto tra le Direttive NIS e NIS2}
+La \textit{Direttiva (UE) 2016/1148}\footcite{nis1-directive}, nota come direttiva NIS, ha rappresentato il primo tentativo del
+legislatore europeo di armonizzare la cybersicurezza all'interno dell'Unione.
+
+La direttiva mirava a innalzare il livello di sicurezza delle reti e dei sistemi informativi, istituendo 
+un quadro comune volto a garantire maggiore uniformità tra gli Stati membri sugli standard minimi di 
+cybersicurezza e di resilienza alle minacce. La sua adozione ha avuto implicazioni rilevanti sul 
+piano organizzativo, in quanto ha riconosciuto formalmente la rilevanza strategica delle infrastrutture digitali 
+per il mercato interno e ha introdotto, per la prima volta a livello europeo, un approccio 
+uniforme di contrasto alle minacce informatiche basato sulla gestione del rischio.
+
+Nonostante il suo ruolo pionieristico, la prima direttiva NIS ha mostrato evidenti limiti
+che ne hanno ridotto l'efficacia e l'impatto rispetto alle aspettative. In primo luogo, il recepimento a livello
+dei singoli Stati membri si è dimostrato fortemente disomogeneo, producendo un quadro frammentato
+a livello europeo\footcite[p. 5]{vandezande}. Inoltre, la normativa presentava anche un problema intrinseco: 
+il suo campo di applicazione era troppo ristretto, includendo soltanto alcuni settori considerati critici 
+(energia, trasporti, bancario, finanziario, sanità, acqua potabile e infrastrutture digitali). Il limitato
+raggio di azione ha rappresentato un grosso limite nel tentativo di diffondere un approccio uniforme, escludendo
+importanti aree anch'esse sensibili alle minacce informatiche\footcite[p. 209]{teichmann}.
+A ciò si aggiungeva la debolezza dei meccanismi di supervisione e sanzione, lasciati in larga misura alla 
+discrezionalità nazionale, con conseguenti disparità nel livello di implementazione e nella 
+deterrenza effettiva\footcite[p. 6]{vandezande}.
+
+In risposta a tali criticità, l’Unione europea ha adottato la \textit{Direttiva (UE) 2022/2555} 
+(NIS2), entrata in vigore a gennaio 2023 e destinata ad abrogare la NIS dal 18 ottobre 
+2024. NIS2 rafforza la portata delle misure previste dal testo precedente ampliando i settori di interesse,
+introducendo la distinzione tra soggetti essenziali e importanti, imponendo requisiti più 
+specifici di gestione del rischio e notificazione degli incidenti, nonché un regime sanzionatorio 
+più severo e uniforme a livello europeo. Anche l'obiettivo dichiarato evolve verso l'attenzione alla cybersicurezza 
+in senso più ampio: non si limita alla protezione della rete e dei sistemi informatici, ma anche degli utenti di
+tali sistemi e di tutti coloro interessati dalle minacce\footcite[p. 5]{vandezande}. In questo
+senso, NIS2 si pone come il primo passo verso un framework europeo per la cybersicurezza, 
+dimostrando una forte vocazione operativa nelle misure prescritte.
+
+
+
+% 1.2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Misure principali della Direttiva NIS2}
+
+\subsection{Ambiti e soggetti coinvolti}
+In linea generale, rientrano nel campo di applicazione della direttiva tutte le imprese di 
+medie e grandi dimensioni che operano nei settori individuati dal legislatore come rilevanti per la resilienza 
+dell’Unione\footcite[art. 2]{nis2-directive}. Le micro e piccole imprese non sono dunque contemplate, salvo i casi in cui forniscano servizi di 
+natura critica, svolgano un ruolo unico o rappresentino un monopolio, forniscano servizi ad un soggetto interessato
+o siano specificatamente designate dal rispettivo Stato membro.
+
+All’interno di tutti gli attori così individuati, la normativa introduce una distinzione in due categorie:
+\begin{itemize}
+    \item \textbf{Soggetti essenziali}, ossia gli operatori di settori la cui interruzione avrebbe conseguenze sistemiche 
+        per la società e l’economia (tra cui energia, trasporti, sanità, infrastrutture digitali)\footcite[Allegato I]{nis2-directive}. 
+        Per la loro rilevanza strategica, questi soggetti sono sottoposti a controlli regolari \textit{ex ante} da parte 
+        delle autorità competenti, che verificano l'adempimento in materia NIS2\footcite[art. 32]{nis2-directive}.
+    \item \textbf{Soggetti importanti}, ossia gli operatori che, pur non raggiungendo lo stesso livello di 
+        criticità sistemica, svolgono comunque un ruolo rilevante per la continuità dei servizi e della catena 
+        del valore (tra cui servizi postali, produzione alimentare, gestione dei rifiuti)\footcite[Allegato II]{nis2-directive}. 
+        Per essi, la vigilanza avviene prevalentemente \textit{ex post}, cioè a seguito di incidenti o segnalazioni di non conformità\footcite[art. 33]{nis2-directive}.
+\end{itemize}
+Questa distinzione consente di graduare gli obblighi, i meccanismi di vigilanza e le eventuali sanzioni in 
+base alla posizione ricoperta dalle organizzazioni e al loro impatto potenziale sulla resilienza complessiva dell’Unione.
+
+\begin{table}[!ht]
+    \centering
+    \caption{Settori e soggetti coinvolti da NIS2: dettaglio e classificazione\footcite{tabella-acn}}
+    \label{tab:nis2-settori}
+    \definecolor{myRed}{HTML}{B71C1C} % dark red
+    \definecolor{myOrange}{HTML}{F9A825} % dark yellow
+    \definecolor{myGreen}{HTML}{1B5E20} % dark green
+    \definecolor{myBlue}{HTML}{0D47A1} % dark blue
+    \setlength{\tabcolsep}{6pt}
+    \renewcommand{\arraystretch}{1.5}
+    \resizebox{\textwidth}{!}{{\large
+    \begin{tabular}{|l|l|l|l|l|}
+    \hline
+        \rowcolor{black}
+        \color{white}\textbf{Settore} & \color{white}\textbf{Dettaglio} & \color{white}\textbf{Grandi imprese} & \color{white}\textbf{Medie imprese} & \color{white}\textbf{Piccole e micro imprese} \\ \hline
+        \rowcolor{gray!20}\multicolumn{5}{|c|}{\textbf{SETTORI ALTAMENTE CRITICI}} \\ \hline
+        Energia & 19 tipologie di soggetto & \cellcolor{myRed}\color{white}Essenziali & \cellcolor{myOrange}\color{white}Importanti & \cellcolor{myGreen}\color{white}Fuori ambito \\ \hline
+        Trasporti & 10 tipologie di soggetto & \cellcolor{myRed}\color{white}Essenziali & \cellcolor{myOrange}\color{white}Importanti & \cellcolor{myGreen}\color{white}Fuori ambito \\ \hline
+        Settore bancario & DORA \textit{lex specialis} & \cellcolor{myRed}\color{white}Essenziali & \cellcolor{myOrange}\color{white}Importanti & \cellcolor{myGreen}\color{white}Fuori ambito \\ \hline
+        Infrastrutture dei mercati finanziari & DORA \textit{lex specialis} & \cellcolor{myRed}\color{white}Essenziali & \cellcolor{myOrange}\color{white}Importanti & \cellcolor{myGreen}\color{white}Fuori ambito  \\ \hline
+        Settore sanitario & 5 tipologie di soggetto & \cellcolor{myRed}\color{white}Essenziali & \cellcolor{myOrange}\color{white}Importanti & \cellcolor{myGreen}\color{white}Fuori ambito \\ \hline
+        Acqua potabile & 1 tipologia di soggetto & \cellcolor{myRed}\color{white}Essenziali & \cellcolor{myOrange}\color{white}Importanti & \cellcolor{myGreen}\color{white}Fuori ambito \\ \hline
+        Acque reflue & 1 tipologia di soggetto & \cellcolor{myRed}\color{white}Essenziali & \cellcolor{myOrange}\color{white}Importanti & \cellcolor{myGreen}\color{white}Fuori ambito \\ \hline
+        Infrastrutture digitali & 9 tipologie di soggetto & \cellcolor{myRed}\color{white}Essenziali & Essenziali/Importanti/Fuori ambito & Essenziali/Importanti/Fuori ambito \\ \hline
+        Gestione dei servizi TIC (B2B) & 2 tipologie di soggetto & \cellcolor{myRed}\color{white}Essenziali & \cellcolor{myOrange}\color{white}Importanti & \cellcolor{myGreen}\color{white}Fuori ambito \\ \hline
+        Spazio & 1 tipologia di soggetto & \cellcolor{myRed}\color{white}Essenziali & \cellcolor{myOrange}\color{white}Importanti & \cellcolor{myGreen}\color{white}Fuori ambito \\ \hline
+        \rowcolor{gray!20}\multicolumn{5}{|c|}{\textbf{SETTORI CRITICI}} \\ \hline
+        Servizi postali e di corriere & 1 tipologia di soggetto & \cellcolor{myOrange}\color{white}Importanti & \cellcolor{myOrange}\color{white}Importanti & \cellcolor{myGreen}\color{white}Fuori ambito \\ \hline
+        Gestione dei rifiuti & 1 tipologia di soggetto & \cellcolor{myOrange}\color{white}Importanti & \cellcolor{myOrange}\color{white}Importanti & \cellcolor{myGreen}\color{white}Fuori ambito \\ \hline
+        Fabbricazione, produzione e distribuzione di sostanze chimiche & 1 tipologia di soggetto & \cellcolor{myOrange}\color{white}Importanti & \cellcolor{myOrange}\color{white}Importanti & \cellcolor{myGreen}\color{white}Fuori ambito \\ \hline
+        Produzione, trasformazione e distribuzione di alimenti & 1 tipologia di soggetto & \cellcolor{myOrange}\color{white}Importanti & \cellcolor{myOrange}\color{white}Importanti & \cellcolor{myGreen}\color{white}Fuori ambito \\ \hline
+        Fabbricazione & 6 tipologie di soggetto & \cellcolor{myOrange}\color{white}Importanti & \cellcolor{myOrange}\color{white}Importanti & \cellcolor{myGreen}\color{white}Fuori ambito \\ \hline
+        Fornitori di servizi digitali & 4 tipologie di soggetto & Importanti/Fuori ambito & Importanti/Fuori ambito & Importanti/Fuori ambito \\ \hline
+        Ricerca & 2 tipologie di soggetto & \cellcolor{myOrange}\color{white}Importanti & \cellcolor{myOrange}\color{white}Importanti & \cellcolor{myGreen}\color{white}Fuori ambito \\ \hline
+        \rowcolor{gray!20}\multicolumn{5}{|c|}{\textbf{ULTERIORI TIPOLOGIE DI SOGGETTI}} \\ \hline
+        Pubblica Amministrazione centrale & 4 categorie di PA & \cellcolor{myRed}\color{white}Essenziali & \cellcolor{myRed}\color{white}Essenziali & \cellcolor{myRed}\color{white}Essenziali \\ \hline
+        Pubblica Amministrazione regionale e locale & 11 categorie di PA & \cellcolor{myOrange}\color{white}Importanti & \cellcolor{myOrange}\color{white}Importanti & \cellcolor{myOrange}\color{white}Importanti \\ \hline
+        Ulteriori tipologie di soggetti & 4 tipologie di soggetti & \cellcolor{myBlue}\color{white}Identificazione dell’Autorità & \cellcolor{myBlue}\color{white}Identificazione dell’Autorità & \cellcolor{myBlue}\color{white}Identificazione dell’Autorità \\ \hline
+    \end{tabular}
+    }}
+\end{table}
+
+L’estensione dell’ambito soggettivo comporta conseguenze rilevanti: molte imprese che prima non erano soggette 
+a obblighi specifici di cybersicurezza devono ora implementare sistemi strutturati di gestione del rischio, 
+rafforzare le proprie capacità di rilevazione e risposta agli incidenti e predisporre procedure di comunicazione 
+rapide ed efficaci con le autorità di vigilanza. 
+
+
+\subsection{Gestione del rischio}
+L'elemento cardine su cui si fonda la Direttiva NIS2 è la gestione del rischio
+quale base delle pratiche e delle politiche di sicurezza. L'articolo 21 sancisce esplicitamente l'obbligo,
+per i soggetti interessati, di adottare misure tecniche, operative e organizzative adeguate e proporzionate al rischio
+cui è esposta l'azienda o l'area dell'azienda in questione\footcite[art. 21]{nis2-directive}. Ciò 
+significa che alcuni controlli possono applicarsi sempre o solamente in corrispondenza di livelli di rischio
+superiori alle soglie fissate internamente dall'impresa, che in ogni caso ha l'onere di documentare e
+giustificare le proprie scelte\footcite[art. 2]{regolamento-2690}.
+
+Il Regolamento di esecuzione (UE) 2024/2690, che stabilisce le norme per l'applicazione della direttiva,
+specifica ulteriormente i requisiti tecnici e metodologici connessi all’articolo 21, delineando un insieme 
+di pratiche di governance del rischio che i soggetti interessati sono tenuti ad applicare. In particolare, 
+il regolamento stabilisce che le politiche di sicurezza e le procedure di gestione del rischio siano formalizzate, 
+approvate dagli organi direttivi e soggette a revisione periodica, rafforzando l’idea che la gestione del rischio 
+costituisca un processo sistematico e continuativo\footcite[Allegato]{regolamento-2690}. Inoltre, 
+esse devono essere soggette a revisione almeno ogni due anni o comunque a seguito di incidenti 
+significativi, variazioni organizzative o mutamenti del contesto delle minacce in cui si opera.
+
+Infine, ENISA dettaglia una \textit{Risk Management Policy} che preveda indicatori e misure per monitorare maturità e performance, 
+liste di policy e una chiara attribuzione di ruoli/responsabilità, in modo che gli esiti di compliance e review alimentino 
+coerentemente il ciclo decisionale del management (risk acceptance documentata, piani correttivi, riesami almeno annuali o a 
+seguito di incidenti significativi).\footcite[pp. 9--25]{enisa-implementing-guidance}.
+
+
+\subsection{Misure di cybersicurezza}
+NIS2 introduce un quadro prescrittivo di misure minime che tutte le entità rientranti nel campo di 
+applicazione devono adottare. L’articolo 21, paragrafo 2, elenca una serie di ambiti specifici 
+che costituiscono il nucleo essenziale della sicurezza informatica richiesta: politiche di analisi e gestione 
+del rischio, capacità di gestione degli incidenti, misure di continuità operativa e piani di disaster recovery, 
+sicurezza della supply chain e delle relazioni con i fornitori (\textit{Third Party Risk Management}), 
+requisiti di sicurezza per lo sviluppo e la manutenzione dei sistemi, testing e auditing periodici, 
+impiego della crittografia e di adeguati sistemi di controllo degli accessi, formazione del personale 
+e pratiche di \textit{cyber hygiene}\footcite[art. 21]{nis2-directive}. 
+
+Il regolamento di esecuzione, come nel caso precedente, precisa i requisiti tecnici e metodologici 
+delle misure di cui all’articolo 21. Esso stabilisce che le politiche di sicurezza devono essere formalizzate 
+in documenti approvati dagli organi direttivi, rese disponibili all’interno dell’organizzazione e sottoposte a revisione periodica o a riesame 
+in occasione di incidenti significativi e di mutamenti rilevanti del contesto di rischio\footcite[art. 3]{regolamento-2690}.
+
+Le misure minime di sicurezza devono comprendere
+la definizione di ruoli e responsabilità interne, la gestione della supply chain e l’inclusione di clausole 
+contrattuali con i fornitori, la gestione delle vulnerabilità, la protezione degli asset lungo il loro ciclo 
+di vita, procedure di autenticazione forte e controllo degli accessi, misure di sicurezza fisica, protezione 
+dei dati e delle comunicazioni, monitoraggio degli eventi di sicurezza e procedure di risposta agli incidenti 
+e di ripristino\footcite[Allegato]{regolamento-2690}.
+
+La specificazione puntuale dei controlli che i soggetti devono implementare è lasciata ai singoli
+Stati membri, secondo quanto previsto dagli ordinamenti nazionali.
+
+
+\subsection{Obblighi di notifica}
+Un'ulteriore misura introdotta da NIS2 riguarda il regime dettagliato in materia di 
+notifica degli incidenti di sicurezza. L'articolo 23 disciplina le modalità e le tempistiche di 
+segnalazione alle autorità competenti e ai CSIRT nazionali. La direttiva prevede che entro 
+24 ore dall’avvenuta rilevazione di un incidente debba essere trasmessa una comunicazione preliminare, 
+seguita entro 72 ore da una notifica completa contenente una prima valutazione 
+dell’impatto e delle misure adottate\footcite[art. 23]{nis2-directive}. Entro un mese dall’incidente, l’entità 
+è tenuta a fornire una relazione finale che includa analisi approfondita delle cause, impatto sui servizi 
+e misure correttive adottate. La normativa contempla inoltre la possibilità di relazioni intermedie, 
+quando la gestione dell’incidente lo renda necessario.
+
+
+\subsection{Governance aziendale e responsabilità}
+Un aspetto innovativo e centrale della direttiva è l’introduzione di responsabilità 
+specifiche per gli organi di gestione delle entità incluse nel campo di applicazione. 
+L’articolo 20 sancisce infatti che i membri degli organi di amministrazione, di direzione o di 
+supervisione siano direttamente responsabili dell’approvazione delle misure di gestione del rischio 
+e della supervisione della loro attuazione\footcite[art. 20]{nis2-directive}. 
+La direttiva richiede inoltre che gli organi di gestione garantiscano che i dipendenti ricevano 
+formazione adeguata e regolare in materia di cybersicurezza, al fine di conoscere ed applicare 
+in maniera consapevole le misure predisposte. 
+
+Il regolamento di esecuzione rafforza ulteriormente tale approccio, richiedendo
+che le responsabilità siano chiaramente attribuite, mediante la creazione di un framework aziendale,
+così da garantire una gerarchia aziendale ben definita e favorire la supervisione
+attiva da parte dei livelli superiori\footcite[Allegato]{regolamento-2690}.
+
+La responsabilità dei vertici aziendali si estende anche alle conseguenze in caso di inadempienza. 
+Sono infatti previste sanzioni amministrative pecuniarie e, nei casi più gravi, 
+misure che possono includere la sospensione temporanea dei dirigenti responsabili
+dai rispettivi incarichi. 
+
+
+
+% 1.3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Direttiva NIS2 in Italia: ACN e CSIRT Italia}
+Il recepimento della Direttiva NIS2 in Italia è avvenuto con il 
+\textit{Decreto Legislativo del 4 settembre 2024, n. 138}, entrato in vigore nell'ottobre 2024\footcite{dlgs138}.
+Il decreto riprende le principali disposizioni della direttiva, precisa le modalità di applicazione a livello nazionale
+e specifica l'attribuzione dei compiti di vigilanza e ricezione delle notifiche all'ACN e al CSIRT Italia.
+
+L’ACN (Agenzia per la Cybersicurezza Nazionale), istituita nel 2021 come agenzia governativa con il compito di proteggere gli interessi nazionali 
+in materia di cybersicurezza, ricopre un ruolo centrale nella supervisione delle entità NIS2 essenziali e importanti. 
+I suoi compiti principali riguardano la vigilanza sul rispetto degli obblighi di gestione del rischio, 
+la ricezione delle notifiche di incidenti significativi, l’adozione di provvedimenti correttivi e 
+la comminazione delle sanzioni\footcite{dlgs138}. 
+
+Inoltre, all’ACN è attribuita la facoltà di emanare linee guida vincolanti e istruzioni operative. Tra i documenti
+più importanti prodotti dall'agenzia, vi sono la Determinazione ACN 164179\footcite{det-acn} e i suoi allegati 1 e 2
+riportanti rispettivamente l'elenco dettagliato delle misure di sicurezza obbligatorie rispettivamente
+per i soggetti importanti\footcite{det-acn-allegato1} ed essenziali\footcite{det-acn-allegato2}. Gli allegati sono resi disponibili anche
+in formato xls, per facilitarne l'adozione per le aziende.
+
+Accanto all’ACN opera il CSIRT (Computer Security Incident Response Team) Italia, 
+responsabile della gestione tecnica delle segnalazioni e del supporto operativo alle imprese. 
+Il CSIRT rappresenta il punto di raccolta e analisi delle notifiche 
+di incidente trasmesse dai soggetti NIS2 e si occupa di fornire riscontri, raccomandazioni e 
+supporto tecnico in risposta alle segnalazioni ricevute\footcite[art. 24]{dlgs138}.
+Il suo compito è quindi cruciale per quanto riguarda la condivisione di informazioni su minacce emergenti, 
+oltre che per la cooperazione con i CSIRT degli altri Stati membri e con ENISA.
+
+Dal punto di vista delle imprese, l’ACN e il CSIRT costituiscono gli interlocutori designati 
+per le questioni legate alla conformità NIS2 sul territorio italiano.
+La normativa nazionale prevede, a tal fine, l’obbligo per ciascun soggetto 
+di designare una persona fisica avente il ruolo di punto di contatto interno per la cybersicurezza,
+con la responsabilità di mantenere un canale di comunicazione con le autorità\footcite[art. 21]{dlgs138}. 
+Tale figura svolge una funzione anche strategica, assicurando che l’azienda sia pronta a 
+segnalare incidenti e a mettere in atto le disposizioni ricevute, gestendo il flusso 
+di informazioni provenienti dall’ACN e dal CSIRT.
+
+
+
+% 1.4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Implicazioni organizzative della Direttiva NIS2}
+In questa sezione si analizzano le implicazioni organizzative dell’adozione della Direttiva NIS2, le sfide dal punto di 
+vista della governance aziendale, della gestione del rischio e dell’allocazione delle risorse, nonché gli impatti 
+sui processi interni e sulla cultura della sicurezza. Per l'analisi si segue la struttura individuata
+da un report condotto da Deloitte nel 2023 sulla normativa\footcite{deloitte-nis2}, organizzato in quattro sezioni:
+\begin{enumerate}
+    \item responsabilità del rischio;
+    \item misure di sicurezza informatica;
+    \item sicurezza della \textit{supply chain};
+    \item notifica degli incidenti.
+\end{enumerate}
+Inoltre, si aggiungono considerazioni sulle pratiche di formazione e igiene informatica e 
+una riflessione sulle principali sfide che le organizzazioni si trovano ad affrontare
+per garantire la propria conformità alla direttiva. 
+
+
+\subsection{Governance e responsabilità nella gestione del rischio}
+Il grande impatto di NIS2 sulla realtà aziendale è dovuto in primo luogo alla formale attribuzione della responsabilità
+della sicurezza agli organi dirigenziali dell'azienda. Gli esperti sottolineano come, in realtà, il CdA (Consiglio di Amministrazione)
+possedesse già questa responsabilità, dovendo rispondere direttamente di ciò che accade all'interno dell'organizzazione, ma 
+la formalizzazione di ciò ha catturato l'attenzione dei manager per due motivi principali, secondo Rivieri:
+\begin{itemize}
+    \item L'attribuzione diretta della responsabilità al board implica la non delegabilità della stessa (non specificata dalla direttiva);
+    dunque, il CISO, figura di carattere tecnico, rimane responsabile solamente dell'implementazione delle misure necessarie, mentre
+    gli amministratori rispondono anche legalmente degli eventi di sicurezza informatica e perciò sono responsabili dell'accettazione dei rischi correlati.
+    \item La formalizzazione pubblica di tale responsabilità costituisce una leva significativa per il CISO nei confronti del top management; in assenza di 
+    adeguate competenze per valutare il rischio informatico, i vertici tendono ad affidarsi con maggiore sistematicità alle figure tecniche, anche per 
+    ridurre l’esposizione a sanzioni, portando a una maggiore rilevanza del CISO nel processo decisionale.
+\end{itemize}
+
+Il CISO, in questo contesto, rappresenta quindi il punto di incontro tra compliance normativa e attuazione tecnica. Secondo ENISA, per 
+garantire efficacia tale figura deve disporre di risorse dedicate e autonomia decisionale, 
+nonché della possibilità di riferire direttamente al board\footcite[p. 23]{enisa-cybersecurity-roles}. 
+Il CISO deve inoltre coordinare un team multidisciplinare, cooperando con figure come \textit{Risk Manager}, \textit{Incident and Threat Manager}, 
+\textit{Compliance Officer} e \textit{Supply Chain Security Specialist}, come suggerito da ENISA in conformità con l'ECSF 
+(European Cybersecurity Skills Framework). Dal punto di vista delle competenze richieste, 
+quindi, deve combinare abilità tecniche (gestione delle vulnerabilità, incident response) con competenze manageriali e comunicative, 
+indispensabili per interagire con il board e guidare la cultura organizzativa della sicurezza. 
+Scompare la figura del manager IT come tecnico verticale: oggi le aziende necessitano di leader con competenze anche strategiche, 
+chiamati ad identificare i rischi aziendali e a supportare decisioni di investimento
+e governance nell'area della cybersecurity\footcite[pp. 32--34]{kouns-ciso}.
+
+Infine, oltre all’approvazione e alla supervisione delle misure, le linee guida ENISA precisano meccanismi di compliance monitoring e 
+di independent review a supporto del board; si ritengono necessari report indipendenti e standardizzati con metriche chiave per l'identificazione dei rischi,
+da presentare almeno annualmente agli organi di gestione per garantire un processo decisionale adeguatamente informato e concretizzare l'accountability
+richiesta da NIS2\footcite[pp. 21--25]{enisa-implementing-guidance}.
+
+
+\subsection{Misure di sicurezza}
+La conformità alla Direttiva NIS2 richiede alle imprese l’adozione di un insieme di misure 
+organizzative e procedurali che integrino la cybersicurezza nei processi aziendali.
+
+In primo luogo, la realizzazione di politiche di cybersicurezza, formalmente approvate dal board 
+e inserite nel sistema di gestione del rischio aziendale, come parte integrante 
+della strategia organizzativa\footcite[Allegato]{regolamento-2690}.
+In quest'ottica, sono essenziali il mantenimento di registri di catalogo dei rischi, la definizione di indicatori 
+di performance relativi alla sicurezza, la presentazione di report periodici agli organi direttivi 
+e la revisione periodica delle policy, anche in seguito a incidenti significativi.
+
+Per raggiungere efficacemente i suoi obiettivi, NIS2 richiede un approccio trasversale, 
+che coinvolga non solo l’area IT, ma anche i dipartimenti legale, compliance, risorse umane 
+e approvvigionamento, oltre alle funzioni operative e al top management.
+Le linee guida all'implementazione della direttiva sottolineano come tale coinvolgimento si traduca in attività concrete:
+l’ufficio legale e la funzione compliance supportano la produzione della documentazione e 
+delle notifiche alle autorità; le risorse umane integrano la 
+formazione in materia di cybersicurezza nei programmi di formazione del personale e del board; 
+la funzione di approvvigionamento deve inserire requisiti di sicurezza e clausole vincolanti 
+nei contratti con i fornitori; il top management, infine, è chiamato a supervisionare e approvare 
+tali misure, assumendo responsabilità dirette\footcite{ecso-whitepaper-nis2}\footcite{enisa-implementing-guidance}.
+
+Sul piano operativo, NIS2 e le linee guida ENISA richiedono la predisposizione di procedure strutturate:  
+\begin{itemize}
+    \item simulazioni periodiche di risposta agli incidenti, documentate e analizzate in termini di \textit{lessons learned};  
+    \item audit interni regolari, finalizzati a verificare l’efficacia delle misure di sicurezza e a pianificare il miglioramento; 
+    \item testing sistematico delle difese aziendali (penetration test e vulnerability assessment, attività di competenza del CISO e del suo team di cybersicurezza), 
+    con l'obbligo di tracciarne i risultati, le azioni correttive intraprese e gli indicatori di performance associati; 
+    \item revisione delle misure e aggiornamento delle procedure a seguito di incidenti rilevanti o 
+    evoluzioni del contesto operativo.
+\end{itemize}
+
+Tutte queste attività devono essere integrate in un ciclo continuo di revisione e miglioramento, 
+con il supporto di metriche e indicatori delle performance di sicurezza, e sostenute da un’adeguata documentazione, 
+necessaria per dimostrare la conformità alle autorità competenti, in linea con il principio di accountability.
+
+
+\subsection{Sicurezza della supply chain}
+La \textit{supply chain} rappresenta uno dei punti più vulnerabili per la resilienza complessiva 
+delle organizzazioni\footcite[pp. 22--25]{ecso-whitepaper-nis2}. 
+Perciò, la gestione dei rischi della catena di fornitura richiede un'attenta
+mappatura dei fornitori critici, analizzando non solo gli interlocutori diretti ma anche quelli 
+di secondo e terzo livello, che possono incidere sulla continuità operativa dei servizi essenziali. 
+
+Le raccomandazioni di ECSO ed ENISA sottolineano l’importanza 
+di integrare clausole contrattuali vincolanti nei rapporti con i fornitori, così da garantire 
+che anche soggetti esterni adottino misure equivalenti, come richiesto dalla direttiva\footcite[p. 2]{ecso-whitepaper-nis2}\footcite[p. 58]{enisa-implementing-guidance}. 
+Ciò implica una stretta collaborazione tra la funzione di approvvigionamento, il CISO e
+l’area legale per inserire nei contratti obblighi di notifica degli incidenti, 
+standard di sicurezza minimi e diritti di audit da parte dell’azienda cliente.  
+
+Alle clausole si devono affiancare meccanismi di monitoraggio continuo, che comprendano la valutazione periodica 
+dei fornitori, la richiesta di attestazioni o certificazioni e, ove necessario, la conduzione di audit.
+NIS2 infatti non consente più di limitarsi a un approccio passivo, ma richiede di strutturare processi di
+supervisione attivi, sistematici e documentati\footcite[pp. 57--63]{enisa-implementing-guidance}.
+
+Tali misure di sicurezza della supply chain introdotte da NIS2 possono rappresentare anche strumenti per ridurre i costi 
+di coordinamento e di transazione tra imprese\footcite{testo-som}. L’approccio regolatorio tende infatti a internalizzare i rischi, in questo caso,
+informatici della filiera, promuovendo clausole contrattuali, audit congiunti e standard comuni di sicurezza. 
+Ciò rafforza la coerenza complessiva della catena, riducendo le asimmetrie che ostacolano il coordinamento e fornendo
+un approccio operativo comune, in linea con l'obiettivo di uniformità perseguito dalla direttiva.
+
+Infine, un'interessante riflessione sulla \textit{supply chain security} riguarda la potenziale nascita di un nuovo scenario competitivo: 
+la sicurezza della filiera non è infatti solamente una questione di compliance, 
+ma le imprese che dimostrano di aver implementato misure di sicurezza valide possono rafforzare la fiducia degli stakeholder e 
+proporsi come partner affidabili sul mercato, guadagnando un vantaggio competitivo non indifferente rispetto ai rivali.
+
+
+\subsection{Notifica degli incidenti}
+Un importante elemento che, come verrà approfondito nel Capitolo \ref{cap:confronto}, differenzia NIS2 dagli standard internazionali
+è la volontà del legislatore europeo di promuovere il processo di condivisione delle informazioni relative agli
+eventi di cybersicurezza, in modo da diffondere la conoscenza in materia e contribuire all'innovazione.
+Perciò, NIS2 pone grande attenzione in merito agli obblighi di notifica degli incidenti, richiedendo alle imprese
+l’adozione di una timeline operativa precisa per l'\textit{incident response}, oltre al conseguente 
+obbligo di testare periodicamente tali misure\footcite[pp.~18--20]{enisa-cybersecurity-roles}.
+
+La normativa fissa precisi KPI in caso di incidenti significativi per gli obblighi di notifica
+e la comunicazione con le autorità di settore. 
+Le organizzazioni hanno ventiquattro ore di tempo per fornire una prima segnalazione di allerta ed entro
+settantadue ore deve seguire una comunicazione ufficiale di risposta all’incidente.
+Dopo un mese, deve essere emesso un rapporto finale sull’incidente oppure, se l’indagine è ancora in corso, 
+il CSIRT può rilasciare un rapporto intermedio. In questo modo si favorisce la collaborazione tra le aziende e 
+le agenzie governative deputate al controllo della cybersicurezza, nonché l'assistenza in caso di emergenze e la gestione
+coordinata delle stesse qualora interessino al tempo stesso più soggetti.
+
+Dal punto di vista organizzativo, a tal fine ogni impresa deve designare un punto di contatto interno per la cybersicurezza, 
+responsabile dei rapporti con l’ACN e con il CSIRT nazionale\footcite[art. 21]{dlgs138}. 
+Questa figura, che deve essere una persona fisica (nel caso italiano, registrata presso l'ACN), ha il compito di garantire la trasmissione 
+delle notifiche di incidente, i rapporti con le autorità e la diffusione interna delle 
+istruzioni ricevute. Ciò comporta un rafforzamento del ruolo di Chief Information Security Officer (CISO), come spiegato da Matteo Herin
+nell'intervista realizzata per questo elaborato, il quale assorbe tali funzioni tra i suoi compiti.
+
+
+\subsection{Formazione e cultura della sicurezza informatica}
+Un altro pilastro dell’adempimento NIS2 è rappresentato dalla formazione e dalla diffusione 
+di una cultura della cybersicurezza a tutti i livelli aziendali. 
+La direttiva stabilisce che i membri degli organi di gestione siano direttamente responsabili 
+dell’approvazione delle misure di sicurezza e ne supervisionino l’attuazione\footcite[art. 20]{nis2-directive}, 
+ma per svolgere efficacemente tali compiti devono possedere una preparazione adeguata. 
+La formazione del board è dunque un requisito essenziale per poter garantire 
+una gestione consapevole dei rischi e per assumersi l’accountability richiesta dal quadro normativo.
+
+Il tema non riguarda tuttavia soltanto i vertici. 
+La conformità alla direttiva passa anche dalla capacità di diffondere tra tutti i dipendenti pratiche 
+di \textit{cyber hygiene}, come l’uso sicuro delle credenziali, la gestione corretta delle 
+informazioni aziendali e la segnalazione tempestiva di anomalie\footcite[pp. 99--103]{enisa-implementing-guidance}. 
+In questo senso, i programmi di formazione periodica assumono la funzione di ridurre il fattore 
+di rischio umano, spesso l’anello più debole della catena di sicurezza. 
+
+
+
+\subsection{Sfide per le organizzazioni}
+Come visto in questa sezione, l'introduzione di NIS2 nel panorama normativo richiede ingenti misure alle aziende
+per adattare i propri processi e la propria organizzazione alle disposizioni legislative. Ciò comporta naturalmente
+un notevole impiego di risorse, tema centrale data la larghissima portata della direttiva, che coinvolge soggetti
+profondamente diversi nella struttura, nelle dimensioni e quindi anche nelle capacità di investimento.
+
+Appare chiaro che le entità più grandi e strutturate abbiano meno difficoltà nell'adozione di NIS2 rispetto alle 
+aziende che per la prima volta si trovano a dover dimostrare accountability in materia di cybersicurezza.
+Le aziende di dimensioni maggiori e quelle che rientravano nella normativa NIS precedente o già soggette ad altre
+misure, come DORA per l'area economico-finanziaria, dispongono già di una struttura avanzata per la gestione
+della sicurezza informatica. Per questi soggetti, NIS2 rappresenta solamente un'integrazione necessaria rispetto
+ai sistemi esistenti, con novità da introdurre soprattutto per la gestione delle terze parti, degli obblighi di
+notifica e delle responsabilità formali del CdA, ma senza alcun cambiamento sostanziale e profondamente impattante\footcite[pp. 2--5]{ecso-whitepaper-nis2}.
+
+In questo contesto è importante notare come la capacità di integrare la sicurezza informatica nei processi decisionali 
+e nelle strategie di business rappresenti un fattore di vantaggio competitivo, aumentando la fiducia del mercato 
+e la continuità operativa e generando barriere all’entrata per i concorrenti meno maturi dal punto di vista organizzativo\footcite{testo-som}.
+Tra essi vi sono i soggetti di dimensioni inferiori o coloro i quali per la prima volta si trovano a dover
+implementare misure di cybersicurezza strutturate. In questa categoria rientrano anche le aziende non classificate NIS2, 
+ma comunque facenti parte della catena produttiva di soggetti NIS2, elemento che costringe le prime a dotarsi dei 
+sistemi richiesti dalla direttiva.
+Tali organizzazioni si trovano a dover sostenere ingenti investimenti nell'ambito cyber, necessitando di sistemi
+nuovi da progettare ad hoc, di una revisione profonda dei processi operativi e di figure esperte che 
+abbiano le competenze per implementare tutto il necessario, con un conseguente impatto elevato sulle proprie risorse\footcite[pp. 2--5]{ecso-whitepaper-nis2}.
+
+Le aziende che si trovano in questa situazione, come si vedrà nei capitoli successivi, possono decidere di realizzare
+i controlli richiesti strutturando direttamente la sicurezza informatica sulle disposizioni NIS2 oppure adottando un 
+framework che consenta loro di progettare una base solida per la cybersicurezza, su cui integrare gli adempimenti mancanti. 
+In entrambe le casistiche, tuttavia, la complessità organizzativa
+rimane elevata e si richiede un'accurata pianificazione delle strategie di business e del budget per includere l'integrazione
+di NIS2 nei processi.

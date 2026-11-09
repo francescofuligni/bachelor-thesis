@@ -1,0 +1,239 @@
+\chapter{Introduzione}
+%\chapter*{Introduzione}
+%\addcontentsline{toc}{chapter}{Introduzione} % per farla apparire nell’indice
+%\markboth{INTRODUZIONE}{}                    % per impostare l'intestazione delle pagine
+
+
+
+% 0.1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Contesto}
+%\section*{Contesto}
+%\addcontentsline{toc}{section}{Contesto} % per farla apparire nell’indice
+L'ultimo decennio, e in particolare il periodo post-pandemico, ha conosciuto una fortissima trasformazione
+digitale in ogni settore. Paradigmi come l'Industria 4.0 enfatizzano l'integrazione di tecnologie digitali e 
+l’interconnessione nei processi produttivi, creando veri e propri ambienti intelligenti grazie all’adozione di 
+strumenti come l’Internet of Things, l’Intelligenza Artificiale e i Big Data.\footcite[pp. 1--2]{clusit-report}
+\footcite[pp. 3--4]{enisa-threat-landscape} In questo scenario, le imprese italiane ed europee devono fronteggiare 
+nuove minacce alla cybersicurezza e alla protezione delle informazioni,
+evolutesi parallelamente al progresso tecnologico.
+
+La sicurezza (in tutte le sue declinazioni) assume dunque un ruolo sempre più centrale nel management aziendale
+e deve essere affrontata sempre più attraverso strategie integrate.
+Gli attacchi moderni non sono più soltanto fisici o informatici, ma una combinazione di entrambi,
+incrementando la complessità della gestione. La valutazione e mitigazione del rischio, la definizione di una soglia 
+di rischio accettabile per gli stakeholder e la resilienza delle infrastrutture aziendali rappresentano oggi temi 
+cruciali per figure come il CISO (Chief Information Security Officer),
+sia a livello di singola organizzazione sia lungo l’intera catena di fornitura.
+
+
+
+% 0.2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Minacce alla sicurezza informatica}
+%\section*{Minacce alla sicurezza informatica}
+%\addcontentsline{toc}{section}{Minacce alla sicurezza informatica} % per farla apparire nell’indice
+Per avere una visione completa sui rischi che le imprese devono gestire e sugli attacchi da fronteggiare,
+è utile considerare i principali report di settore, che offrono un quadro aggiornato sulle minacce e sulle
+opportunità di rafforzamento dei sistemi di difesa. Tra i riferimenti più autorevoli si annoverano:
+\begin{itemize}
+    \item \textbf{ENISA Threat Landscape 2024}: rapporto annuale dell'Agenzia dell'Unione europea per la 
+        cybersicurezza, che fornisce una panoramica sulle principali minacce, tendenze e vulnerabilità
+        a livello europeo.
+    \item \textbf{Rapporto Clusit 2025}: pubblicazione dell’Associazione Italiana per la Sicurezza 
+        Informatica, che analizza l’andamento degli attacchi informatici e delle tecniche utilizzate
+        con focus specifico sul contesto italiano.
+\end{itemize}
+
+Entrambi i report rilevano, come si può immaginare, un trend di continua crescita degli episodi di
+incidenti informatici rilevati negli ultimi anni.
+Inoltre, sottolineano come il quadro geopolitico internazionale contribuisca in modo significativo 
+al proliferare di tali eventi. 
+Sebbene infatti il \textit{cybercrime} sia costantemente la categoria di attaccanti più prolifica\footcite[p. 22]{clusit-report},
+il moltiplicarsi dei conflitti globali e di fenomeni appartenenti alla sfera
+dell’\textit{hacktivism} costituiscono fattori sempre più rilevanti nelle statistiche sugli attacchi. 
+Tuttavia, la presente tesi si concentrerà esclusivamente sugli aspetti di cybersicurezza in ambito aziendale, 
+lasciando sullo sfondo le dimensioni prettamente militari e geopolitiche.
+
+\subsection{Europa}
+%\subsection*{Europa}
+%\addcontentsline{toc}{subsection}{Europa} % per farla apparire nell’indice
+Il \textit{Threat Landscape 2024} di ENISA individua le principali minacce che colpiscono l’ecosistema digitale
+europeo. Tra luglio 2023 e giugno 2024 ENISA ha registrato 11,079 incidenti, di cui 322 con un impatto su
+più paesi dell'Unione\footcite[p. 12]{enisa-threat-landscape}. DDoS e ransomware si confermano le minacce più
+significative dal punto di vista numerico, mentre phishing e social engineering, sempre più potenziati dagli strumenti di intelligenza artificiale, 
+risultano in forte crescita sia per volume sia per efficacia (Fig. \ref{fig:incidenti_per_tipo}). 
+
+\defaultimage{enisa-fig2.png}{Ripartizione degli incidenti analizzati per tipologia di minaccia\footcite[Fig. 2]{enisa-threat-landscape}}{fig:incidenti_per_tipo}
+
+A livello europeo, gli attacchi risultano distribuiti trasversalmente tra i diversi settori, 
+evidenziando come gli attori malevoli non concentrino le proprie attività su un unico ambito 
+specifico (Fig. \ref{fig:incidenti_per_settore}). La cybersicurezza presenta pertanto come 
+una sfida che interessa l’intero tessuto economico e sociale, coinvolgendo tutti senza distinzioni rilevanti.
+
+\defaultimage{enisa-fig6.png}{Settori colpiti per numero di incidenti\footcite[Fig. 6]{enisa-threat-landscape}}{fig:incidenti_per_settore}
+
+ENISA evidenzia un incremento degli attacchi alle catene di fornitura, sfruttando i rapporti di fiducia 
+tra imprese, fornitori e partner tecnologici come vettori per la propagazione delle minacce attraverso 
+le reti.\footcite[pp. 12--13]{enisa-threat-landscape} Attacchi alla supply chain rappresentano una minaccia trasversale 
+a più domini, che richiede un approccio ampio alla gestione del rischio, volto al monitoraggio di tutte le dipendenze critiche.
+
+Il report segnala anche la crescita delle compromissioni degli ambienti cloud, sempre più 
+utilizzati dalle organizzazioni per la gestione dei dati, a riprova del fatto che gli attacchi data-related restano 
+tra i principali obiettivi degli attaccanti, rappresentando una fonte remunerativa di grande rilevanza\footcite[p. 17]{enisa-threat-landscape}.
+
+\subsection{Italia}
+%\subsection*{Italia}
+%\addcontentsline{toc}{subsection}{Italia} % per farla apparire nell’indice
+Il quadro delineato dal \textit{Rapporto Clusit 2025} conferma in larga parte, a livello nazionale,
+le tendenze individuate da ENISA. Nel 2024 in Italia si è registrato un aumento del 15,2\% degli 
+attacchi rispetto all’anno precedente, mentre la quota di incidenti registrati nel Paese è superiore
+del 10\% rispetto al dato globale, segno di una persistente fragilità nella sicurezza dei sistemi 
+informatici italiani\footcite[pp. 30--32]{clusit-report}. Un elemento di riflessione in questo senso
+è la sproporzione tra il peso economico dell’Italia e l’incidenza degli attacchi: a fronte di un PIL pari a 
+circa l’1,8\% di quello mondiale, il Paese concentra il 10,1\% degli incidenti informatici globali\footcite[p. 30]{clusit-report}.
+Si segnala comunque che il trend di crescita del numero di incidenti in Italia nel 2024 rimane 
+inferiore rispetto al resto del mondo (Fig. \ref{fig:italia_vs_global}). 
+
+\defaultimage{clusit-fig24}{Crescita percentuale in Italia a confronto con il dato globale\footcite[Fig. 24]{clusit-report}}{fig:italia_vs_global}
+
+Un dato significativo riguarda la gravità degli incidenti: gli incidenti classificati come critici
+rappresentano solo il 9\% in Italia, contro il dato globale del 29\%. Come sottolineato dal Clusit,
+questo dato, da un lato, rappresenta sicuramente un segnale positivo per le infrastrutture IT, ma dall'altro
+potrebbe indicare che le organizzazioni italiane sono più spesso vittime di attacchi meno gravi e dunque
+presentano una vulnerabilità superiore alla media\footcite[pp. 41--42]{clusit-report}
+
+I dati dell'Osservatorio Cybersecurity del Politecnico di Milano confermano queste ipotesi, evidenziando
+come gli incidenti riportati dalle grandi aziende italiane nel 37\% dei casi non abbiano avuto conseguenze
+significative\footcite[p. 42]{clusit-report}.
+
+
+
+% 0.3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Standard internazionali e direttive europee}
+%\section*{Standard internazionali e direttive europee}
+%\addcontentsline{toc}{section}{Standard internazionali e direttive europee} % per farla apparire nell’indice
+Per supportare la gestione aziendale e fronteggiare le crescenti minacce informatiche, negli anni sono stati 
+sviluppati diversi standard e framework internazionali, con l’obiettivo di promuovere buone pratiche condivise.
+Tra i più diffusi si segnalano lo \textit{Standard ISO/IEC 27001:2022} e il \textit{NIST Cybersecurity Framework (CSF) 2.0}, 
+oggi strumenti di riferimento per la gestione della sicurezza delle informazioni e del rischio cyber, oltre che per 
+l’attuazione di un efficace sistema difensivo\footcite[p. 4]{uni-pdr174}.
+
+La Prassi di Riferimento UNI/PdR 174:2025 riassume efficacemente scopi e differenze dei due standard:
+\begin{citazione}[p. 4]{uni-pdr174}
+    ISO/IEC 27001 definisce i requisiti per stabilire, attuare, mantenere e migliorare in modo
+    continuo un SGSI (Sistema di Gestione per la Sicurezza delle Informazioni), consentendone la
+    certificazione volontaria. Tale sistema è basato sulla gestione del rischio e sulla
+    determinazione dei controlli necessari a trattarlo.
+\end{citazione}
+\begin{citazione}[p. 4]{uni-pdr174}
+    Il NIST Cybersecurity Framework (CSF) 2.0 è una guida utilizzata da organizzazioni di diversa natura
+    per gestire in modo strutturato i rischi di cybersecurity. La guida è centrata su una tassonomia di
+    obiettivi che consentono di comprendere, valutare, pianificare, prioritizzare e
+    comunicare le attività volte a ridurre l’esposizione ai rischi informatici.
+\end{citazione}
+
+Parallelamente, in ambito europeo prosegue il processo normativo sulla cybersicurezza.
+La \textit{Direttiva (UE) 2022/2555}, nota come NIS2, è stata adottata dal Parlamento europeo e dal Consiglio
+il 14 dicembre 2022, abrogando la precedente \textit{Direttiva (UE) 2016/1148} (NIS). NIS2 introduce misure 
+vincolanti per garantire un livello comune elevato di cybersicurezza nell’Unione\footcite[art. 1]{nis2-directive}, 
+rappresentando un punto di svolta per le organizzazioni chiamate ad adeguarsi.
+
+Essendo il 2024 l'anno di effettiva entrata in vigore della direttiva e visto il grande numero di
+soggetti interessati, soprattutto in Italia, è ancora presto per trarre conclusioni definitive
+sul suo impatto nel settore della cybersicurezza. Tuttavia, è ragionevole attendersi che obblighi e sanzioni previsti spingano
+le aziende a porre maggiore attenzione alla sicurezza, come è già avvenuto nel settore finanziario, 
+uno tra i più normati recentemente con misure quali la DORA, in cui si osserva una riduzione del numero di incidenti
+rispetto ai dati storici\footcite[pp. 5--6]{clusit-report}.
+
+
+
+% 0.4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Cosa cambia per le aziende}
+%\section*{Cosa cambia per le aziende}
+%\addcontentsline{toc}{section}{Cosa cambia per le aziende} % per farla apparire nell’indice
+Le implicazioni organizzative dello scenario presentato sono evidenti: l’aumento della superficie d’attacco e la crescente
+sofisticazione delle minacce richiedono un approccio integrato di governance e di gestione del rischio. Come
+sottolinea il Clusit,
+\begin{citazione}[p. 43]{clusit-report}
+    La capacità di determinare, anticipare e gestire le evoluzioni legate alle minacce esogene, oltre che al
+    contesto interno dell'organizzazione, è ormai fondamentale.
+\end{citazione}
+
+La priorità deve essere data alla governance della sicurezza e al presidio dei rischi specifici dell'azienda, 
+realizzando misure preventive, mitigative o trasferendo queste responsabilità laddove necessario.
+Anche il tema della formazione del personale, soprattutto nelle unità organizzative
+esposte a maggior rischio, ricopre un ruolo centrale: l'errore umano rappresenta ancora oggi uno dei 
+primi punti di accesso per i cybercriminali alle imprese (basti pensare agli attacchi di phishing,
+anch'essi in crescita\footcite[p. 44]{clusit-report}).
+La resilienza digitale deve rappresentare un elemento essenziale del “patto di fiducia” tra cittadini, imprese e istituzioni,
+obiettivo che costituisce uno dei pilastri fondamentali su cui si erge NIS2\footcite[p. 45]{clusit-report}.
+
+
+
+% 0.5 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Obiettivo}
+%\section*{Obiettivo}
+%\addcontentsline{toc}{section}{Obiettivo} % per farla apparire nell’indice
+ISO/IEC 27001, NIST CSF e la Direttiva NIS2 costituiscono i principali riferimenti per la gestione della cybersicurezza aziendale e, 
+al contempo, pongono questioni rilevanti di \textit{governance} e responsabilità. Gli standard internazionali forniscono un linguaggio 
+comune e un metodo strutturato per organizzare controlli e processi; la Direttiva NIS2 introduce invece obblighi giuridici vincolanti, 
+responsabilità dirette del vertice aziendale e un regime sanzionatorio significativo. 
+
+Pur condividendo l’obiettivo di innalzare il livello di sicurezza e resilienza, ciascuno di questi strumenti
+presenta approcci e requisiti differenti: gli standard costituiscono una solida base metodologica, ma non
+sono di per sé sufficienti a garantire la piena conformità normativa, che richiede l’adozione di misure
+aggiuntive e specifiche per la singola azienda.
+
+A partire da tali presupposti, l’elaborato persegue due obiettivi principali:
+\begin{enumerate}
+  \item Chiarire il rapporto tra strumenti volontari e obblighi normativi: evidenziare in che misura l’adozione di ISO/IEC 27001:2022 e del 
+    NIST CSF 2.0 possa agevolare (ma non sostituire) la piena conformità a NIS2, distinguendo le aree di sovrapposizione da quelle che 
+    richiedono misure aggiuntive specifiche per la singola impresa.
+  \item Analizzare le implicazioni organizzative della direttiva e il ruolo del CISO: indagare come gli obblighi di NIS2 si traducano in responsabilità 
+    operative e decisionali per il CISO e per il top management, anche alla luce delle evidenze emerse dalle interviste a professionisti del settore, 
+    e come gli standard internazionali possano fungere da strumenti di supporto all’attuazione.
+\end{enumerate}
+
+In generale, l'elaborato si propone di analizzare, nella consapevolezza che il tema resti ampio e con l'auspicio
+di offrire un contributo utile alla ricerca in materia, come le imprese si adeguino alla Direttiva NIS2, quali nuove
+responsabilità e sfide essa comporti per il management e in che modo si rapporti agli standard internazionali menzionati.
+La comprensione del ruolo di ISO/IEC 27001 e NIST CSF e delle responsabilità della figura del CISO nel processo di attuazione dei requisiti della 
+Direttiva NIS2 costituirà dunque il nucleo centrale dell’analisi sviluppata nei capitoli successivi.
+
+
+
+% 0.6 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Metodologia}
+%\section*{Metodologia}
+%\addcontentsline{toc}{section}{Metodologia} % per farla apparire nell’indice
+La metodologia adottata nell’elaborato si articola su tre aspetti, con l’obiettivo di integrare l’analisi 
+teorica e documentale con l’evidenza empirica e di restituire una visione completa delle implicazioni organizzative della Direttiva NIS2.
+
+In primo luogo, viene svolta un’analisi della Direttiva NIS2, dello standard \textit{ISO/IEC 27001:2022} e del \textit{NIST Cybersecurity Framework (CSF) 2.0}. 
+Tale fase si basa su una revisione sistematica della letteratura scientifica in merito, dei testi normativi e degli standard di riferimento, nonché su 
+studi e linee guida elaborate da enti nazionali ed europei (ad esempio ENISA ed ECSO). Lo scopo è evidenziare punti di convergenza e divergenza tra strumenti 
+di regolazione vincolante e framework di cybersicurezza, valutando in che misura questi ultimi possano agevolare, ma non sostituire, come si vedrà,
+la piena compliance alla normativa europea.
+
+Successivamente, l’elaborato propone un confronto strutturato tra i tre strumenti, con un approccio di \textit{gap analysis}.
+Questa parte ha l’obiettivo di rendere immediatamente visibile il grado di copertura dei requisiti della Direttiva da parte degli standard, 
+mettendo in luce le aree in cui un’organizzazione deve implementare misure aggiuntive. A tal fine, nel Capitolo \ref{cap:mapping} è presentata una tabella di mappatura che 
+delinea l'allineamento delle misure prescritte dall'Art. 21 della Direttiva NIS2 con gli \textit{outcome} esposti nell'allegato del framework NIST
+e i controlli dell'\textit{Annex A} di ISO 27001.
+
+Infine, l’analisi condotta viene integrata da un’indagine empirica basata su interviste a Chief Information Security Officer (CISO) di grandi aziende italiane.
+Tale approccio consente di cogliere la prospettiva gestionale e strategica delle figure direttamente coinvolte nell’attuazione delle misure di cybersicurezza. 
+In particolare, sono stati intervistati:
+\begin{itemize}
+    \item Matteo Herin, CISO \& Head of AI Cybersecurity presso Carrefour Italia (intervista individuale condotta dall'autore in data 10/09/2025);
+    \item Michele Rivieri, CISO di Prometeia (intervista individuale condotta dall'autore in data 17/09/2025).
+\end{itemize}
+Le interviste hanno l’obiettivo di approfondire il ruolo del CISO, le responsabilità operative e decisionali derivanti dall’attuazione della Direttiva NIS2, 
+nonché le modalità con cui gli standard internazionali possono concretamente supportarne l’implementazione in azienda. Le considerazioni emerse vengono 
+discusse in relazione alle evidenze tratte dai documenti analizzati, evidenziando criticità, opportunità e \textit{trade-off} organizzativi per il 
+top management.
+
+Si segnala che il campione di intervistati, limitato a grandi organizzazioni, non permette di rappresentare pienamente la varietà di realtà 
+imprenditoriali interessate dalla Direttiva NIS2, in particolare le PMI, essenza del tessuto imprenditoriale italiano nonché le entità maggiormente 
+esposte a vincoli di risorse, fortemente rilevanti in fase di implementazione delle misure di cybersicurezza. Tuttavia, l’obiettivo non è fornire 
+un quadro esaustivo di tutte le casistiche, anché perchè arduo, bensì illustrare le principali implicazioni organizzative e gestionali della Direttiva 
+attraverso evidenze empiriche e presentare una riflessione critica sul ruolo degli standard internazionali come strumenti di supporto al management.

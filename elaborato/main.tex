@@ -1,0 +1,295 @@
+\documentclass[12pt,a4paper,twoside,openright]{report}
+
+% -------------------------
+% Pacchetti base per lingua, encoding e font
+% -------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+\usepackage{lmodern}
+\usepackage{float}
+\usepackage[table]{xcolor}  % abilita \rowcolor nelle tabelle
+
+% -------------------------
+% Impostazioni grafiche e di pagina
+% -------------------------
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\usepackage{setspace}
+\setstretch{1.5}
+
+\usepackage{fancyhdr}
+\usepackage{emptypage} % rimuove numeri/intestazioni dalle pagine vuote (openright)
+\setlength{\headheight}{27.11652pt}
+\pagestyle{fancy}
+\fancyhf{}
+% Pagine pari: numero a sinistra, titolo a destra; Pagine dispari: titolo a sinistra, numero a destra
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LO,RE]{\leftmark}
+
+% -------------------------
+% Gestione grafica
+% -------------------------
+\usepackage{graphicx}
+\graphicspath{{immagini/}}
+
+% -------------------------
+% Hyperref e riferimenti
+% -------------------------
+\usepackage[hidelinks]{hyperref}
+\usepackage{csquotes}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{amssymb}
+% Tabelle flessibili e su più pagine
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{ltablex}
+\keepXColumns
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{caption}
+
+\AtBeginEnvironment{tabularx}{\singlespacing}
+\AtBeginEnvironment{ltablex}{\singlespacing}
+
+% Colonne comode per testo a capo e allineato a sinistra
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+% Compatta le tabelle e evita che lo \setstretch globale (1.5) le renda troppo alte
+\renewcommand{\arraystretch}{1.15}
+\AtBeginEnvironment{longtable}{\small\setstretch{1.15}}
+
+% -------------------------
+% Bibliografia con biblatex
+% -------------------------
+% Usa biblatex con bibtex, stile verbose, backref e citazioni complete a piè di pagina
+\usepackage[
+  backend=bibtex,
+  style=verbose,
+  sorting=nyt,          % mostra dove la fonte è stata citata
+  ibidtracker=false,    % disabilita abbreviazioni come ibid.
+  opcittracker=false,   % disabilita op. cit.
+  loccittracker=false,  % disabilita loc. cit.
+  maxcitenames=99,      % mostra tutti gli autori nelle citazioni
+  giveninits=false,     % mostra nomi completi senza abbreviazioni
+  maxbibnames=99,
+  dashed=false
+]{biblatex}
+
+
+\addbibresource{bibliografia.bib}
+
+% Forza visualizzazione Nome Cognome per tutti gli autori in bibliografia
+\AtBeginBibliography{
+  \renewcommand*{\mkbibnamelast}[1]{#1}%
+  \renewcommand*{\mkbibnamefirst}[1]{#1}%
+  \renewcommand*{\mkbibnameprefix}[1]{#1}%
+  \renewcommand*{\mkbibnameaffix}[1]{#1}%
+  \renewcommand*{\revsdnamepunct}{ }%
+  \renewcommand*{\finalnamedelim}{ e\ }%
+}
+\DeclareNameAlias{default}{given-family}
+
+% Imposta i titoli in corsivo nella bibliografia
+\DeclareFieldFormat{title}{\textit{#1}}
+\DeclareFieldFormat{maintitle}{\textit{#1}}
+\DeclareFieldFormat[article]{title}{\textit{#1}}
+
+% Forza citazioni sempre complete (mai abbreviazioni)
+\DeclareCiteCommand{\footcite}[\mkbibfootnote]
+  {\usebibmacro{prenote}}
+  {\usebibmacro{citeindex}%
+   \printnames{labelname}%
+   \setunit{\nameyeardelim}%
+   \printfield{labelyear}%
+   \newunit%
+   \printfield[title]{title}%
+   \newunit%
+   \printlist{publisher}%
+   \newunit%
+   \printfield{year}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+
+\setlength{\skip\footins}{20pt} % spazio consigliato tra testo e note a piè
+
+% -------------------------
+% Ambiente per citazioni standard
+% -------------------------
+% Definisce un ambiente per citazioni in corsivo con fonte obbligatoria e virgolette automatiche
+\newenvironment{citazione}[2][]{%
+  \begin{quote}%
+    \itshape% 
+    \def\citazionefonte{#2}%
+    \def\citazionepagina{#1}%
+    ``\ignorespaces%
+}{%
+    %
+    \ifx\citazionepagina\empty%
+      \footcite{\citazionefonte}%
+    \else%
+      \footcite[\citazionepagina]{\citazionefonte}%
+    \fi%
+    \unskip''%
+  \end{quote}%
+}
+
+% -------------------------
+% Impostazioni generali
+% -------------------------
+\title{\textbf{Implicazioni organizzative della Direttiva NIS2: il supporto degli standard internazionali e il ruolo strategico del CISO nell'attuazione della normativa} \\
+    \large ..}
+\author{Francesco Maria Fuligni}
+\date{\today}
+
+% -------------------------
+% Documento
+% -------------------------
+\begin{document}
+
+% Frontespizio
+\begin{titlepage}
+  \begin{center}
+    {{\Large{\textsc{Alma Mater Studiorum $\cdot$ Universit\`a di Bologna}}}} \rule[0.1cm]{15.8cm}{0.1mm}
+    \rule[0.5cm]{15.8cm}{0.6mm}
+    {\small{\bf SCUOLA DI SCIENZE\\
+    Corso di Laurea in Informatica per il Management }}
+  \end{center}
+  \vspace{15mm}
+  \begin{center}
+    {\LARGE{\bf Implicazioni organizzative della Direttiva NIS2: il supporto degli standard internazionali e il ruolo strategico del CISO nell'attuazione della normativa }}\\
+    \vspace{3mm}
+  \end{center}
+  \vspace{40mm}
+  \par
+  \noindent
+  \begin{minipage}[t]{0.47\textwidth}
+    {\large{\bf Relatore:\\
+    Chiar.mo Prof.\\
+    Edoardo Mollona
+    }}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.47\textwidth}\raggedleft
+    {\large{\bf Presentata da:\\
+    Francesco Maria Fuligni
+    }}\\
+  \end{minipage}
+  \vspace{20mm}
+  \begin{center}
+    {\large{\bf Sessione II\\
+    Anno Accademico 2024/2025}}
+  \end{center}
+\end{titlepage}
+
+
+
+% DEDICA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ù
+\cleardoublepage
+\thispagestyle{empty}
+\vspace*{7cm}
+\begin{flushright}
+\large
+\textit{Il futuro è tutto davanti a te, carico di sorprese e di promesse.\\
+Sei all’alba della Vita!\\
+\small{-- Don Andrea Scognamiglio}}
+\end{flushright}
+% DEDICA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% Numerazione frontespizio in romano
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+% Rinomina "Elenco delle figure" in "Indice delle figure"
+%\renewcommand{\listfigurename}{Indice delle figure}
+
+% Indice e lista figure
+\tableofcontents
+\listoffigures
+\listoftables
+\clearpage
+
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyhead[LE,RO]{\thepage}
+  \fancyhead[LO,RE]{\leftmark}
+  \renewcommand{\headrulewidth}{0.4pt}
+}
+\pagestyle{fancy}
+
+% Numerazione normale
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% Template per immagini
+\newcommand{\defaultimage}[3]{
+  \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth,height=0.4\textheight,keepaspectratio]{#1}
+    \caption{#2}
+    \label{#3}
+  \end{figure}
+}
+
+% Capitoli inclusi
+\include{capitoli/intro.tex}
+\include{capitoli/cap1.tex}
+\include{capitoli/cap2.tex}
+\include{capitoli/cap3.tex}
+\include{capitoli/cap4v2.tex}
+\include{capitoli/cap5.tex}
+\include{capitoli/concl.tex}
+
+% Appendici
+%\appendix
+%\include{capitoli/appA.tex}
+
+% Bibliografia e fonti (sezioni separate)
+\cleardoublepage
+\printbibliography[heading=bibintoc, title={Bibliografia}, notkeyword={interviste}, notkeyword={sitografia}]
+\printbibliography[heading=bibintoc, title={Sitografia}, keyword={sitografia}]
+\begin{refsection}
+\nocite{*}
+\printbibliography[heading=bibintoc, title={Interviste}, keyword={interviste}]
+\end{refsection}
+
+
+
+\cleardoublepage
+\chapter*{Ringraziamenti}
+\addcontentsline{toc}{chapter}{Ringraziamenti}
+\markboth{RINGRAZIAMENTI}{}
+\setlength{\parskip}{1.5em}
+\setlength{\parindent}{0pt}
+
+Desidero esprimere la mia sincera gratitudine a Francesco Zazza, Mattia D’Ambrosio, Matteo Herin, Piero Randazzo e Michele Rivieri 
+per la disponibilità e il prezioso supporto offerto nella ricerca dedicata alla figura del CISO.
+Il loro contributo ha arricchito significativamente questo lavoro, rendendolo più concreto e vicino alla realtà professionale.
+
+Un sentito ringraziamento al professor Edoardo Mollona e alla dottoressa Anastasio per la guida attenta, la competenza e la fiducia 
+dimostrate durante il percorso di redazione della tesi.
+La possibilità di approfondire temi che sento affini alle mie aspirazioni future ha rappredentato per me un’occasione di crescita personale 
+e professionale di grande valore.
+
+Un grazie speciale a tutti i miei amici, compagni di strada e di vita, per la loro presenza costante, il sostegno e le risate che 
+hanno accompagnato questi anni.
+
+Infine, il mio pensiero più profondo va alla mia famiglia, che è e rimarrà sempre il mio porto sicuro, fonte di forza, serenità e 
+ispirazione nei momenti di gioia come in quelli di difficoltà.
+
+\begin{flushright}
+  \textit{Francesco Maria Fuligni}
+\end{flushright}
+\cleardoublepage
+% RINGRAZIAMENTI %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\end{document}

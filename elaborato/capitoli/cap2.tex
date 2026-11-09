@@ -1,0 +1,246 @@
+\chapter{Standard internazionali e framework per la cybersicurezza}
+\label{cap:standard}
+
+% 2.1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Standard ISO/IEC 27001:2022}
+
+\subsection{Scopi e struttura dello standard}
+L’ISO/IEC 27001:2022 è lo standard internazionale di riferimento per la gestione della sicurezza delle informazioni,
+con oltre 40.000 certificazioni rilasciate a livello mondiale\footcite[p. 2]{mcintosh}.
+
+Definisce i requisiti per l’istituzione, l’attuazione, il mantenimento e il miglioramento continuo di un 
+\textit{Sistema di Gestione per la Sicurezza delle Informazioni} (SGSI), con l’obiettivo di garantire la protezione della riservatezza, 
+integrità e disponibilità delle informazioni trattate dalle organizzazioni\footcite[pp. iv--v]{iso27001}. 
+Lo standard si propone non soltanto come mezzo tecnico, ma anche come strumento organizzativo per strutturare la sicurezza 
+informatica nei processi e negli aspetti di governance.
+
+Lo standard segue \textit{Annex SL}, ovvero una struttura di alto livello comune a tutti gli standard ISO per i sistemi di gestione.
+Tale struttura prevede dieci capitoli\footcite{uni-harmonized-structure}: 
+\begin{enumerate}
+    \item Scopo
+    \item Riferimenti normativi
+    \item Termini e definizioni
+    \item Contesto dell'organizzazione
+    \item Leadership
+    \item Pianificazione
+    \item Supporto
+    \item Attività operative
+    \item Valutazione delle prestazioni
+    \item Miglioramento
+\end{enumerate}
+Inoltre, si fonda sul principio del miglioramento continuo, attuato attraverso il ciclo PDCA 
+(Plan, Do, Check, Act), che guida in modo sistematico la pianificazione, l’implementazione, 
+la verifica e il perfezionamento dei processi di gestione della sicurezza delle informazioni\footcite[p. 17]{watkins-iso}.
+
+A corredo del contenuto dello standard, l'\textit{Annex A} riporta un catalogo di controlli 
+di sicurezza selezionabili dalle aziende in base al proprio profilo di rischio\footcite[Annex A]{iso27001},
+adattando così le misure alle necessità di ogni SGSI.
+
+
+\subsection{Misure di gestione del rischio informatico}
+La gestione del rischio costituisce l’elemento fondante di ISO 27001. Lo standard richiede infatti che l’organizzazione 
+sia dotata di un processo strutturato per identificare, valutare e trattare i rischi per la sicurezza delle informazioni, in coerenza 
+con il proprio contesto e con gli obiettivi strategici\footcite[pp. 6--8]{iso27001}.
+
+Il processo di gestione del rischio si articola in due fasi principali. La prima è la valutazione del rischio (\textit{risk assessment}), 
+che comprende l’identificazione delle minacce e delle vulnerabilità, l’analisi delle probabilità e degli impatti di potenziali incidenti
+ai danni dell'azienda e la determinazione dei livelli di rischio accettabili.
+La seconda è il trattamento del rischio (\textit{risk treatment}), in cui l’organizzazione definisce e 
+implementa misure tecniche e procedurali per ridurre i rischi a un livello ritenuto tollerabile\footcite[pp. 4--5]{iso27001}.
+Tale livello non è stabilito dallo standard, ma deve essere determinato dalle singole imprese in relazione alla loro esposizione
+alle minacce e alla capacità di tollerare il rischio, secondo il risk framework da loro adottato.
+
+A completamento del processo, lo standard stabilisce che i risultati della gestione del rischio debbano essere documentati e 
+integrati nei processi di governance e di pianificazione strategica. La responsabilità ultima della valutazione e accettazione dei 
+rischi spetta alla direzione, la quale deve dimostrare un impegno attivo nella supervisione del sistema di gestione della sicurezza 
+delle informazioni\footcite[pp. 5--6]{iso27001}.
+
+
+\subsection{Controlli di sicurezza: Annex A}
+L’\textit{Annex A} rappresenta il principale strumento operativo a supporto del trattamento del rischio:
+raccoglie un insieme di controlli di sicurezza che le organizzazioni possono adottare come misure di trattamento dei 
+rischi individuati nei processi di valutazione\footcite[pp. iv--v]{iso27001}.
+Ogni controllo è formulato come un obiettivo da perseguire, lasciando all’organizzazione la libertà di definire 
+le modalità più adeguate di implementazione in base al proprio contesto\footcite[p. 16]{watkins-iso}.
+
+I controlli elencati sono 93 e sono organizzati in quattro domini tematici principali\footcite[pp. 28--29]{watkins-iso}:
+\begin{enumerate}
+    \item Controlli organizzativi: includono politiche di sicurezza, responsabilità, relazioni con fornitori, gestione dei progetti e continuità operativa.
+    \item Controlli per le persone: comprendono la consapevolezza del personale, la formazione e la definizione dei ruoli di sicurezza.
+	\item Controlli fisici: riguardano la protezione degli asset fisici, delle infrastrutture e degli ambienti di lavoro.
+	\item Controlli tecnologici: coprono ambiti come la gestione degli accessi, la protezione dei dati, il monitoraggio e la crittografia.
+\end{enumerate}
+
+L'\textit{Annex A}, pur non essendo esaustivo o prescrittivo, rappresenta un punto di riferimento comune per la 
+progettazione delle misure di sicurezza. La sua funzione è quella di fornire un repertorio di \textit{best practices} utilizzate e riconosciute a 
+livello internazionale che possono essere selezionate, adattate o integrate in funzione delle necessità specifiche dell'impresa. 
+Questo elemento rappresenta uno dei punti di forza di ISO, poiché permette alle imprese di calibrare le proprie 
+politiche di sicurezza sulla base del profilo di rischio specifico del SGSI\footcite[p. 22]{watkins-iso}.
+
+I controlli diventano anche parte integrante dello \textit{Statement of Applicability} (SoA), il principale
+documento obbligatorio per la certificazione ISO che esplicita le misure adottate e ne giustifica l’esclusione ove non pertinenti\footcite[pp. 4--5]{iso27001}.
+
+
+\subsection{Implicazioni organizzative della certificazione ISO 27001}
+L’adozione di ISO 27001 incide profondamente sulla governance, 
+sui processi aziendali e sull'organizzazione in generale. Lo standard richiede il coinvolgimento attivo della direzione nella definizione della 
+politica di sicurezza, nell’allocazione delle risorse e nella supervisione del SGSI, in conformità con le clausole 5.1 e 5.2\footcite[pp. 2--3]{iso27001}. 
+L’adesione alla struttura armonizzata \textit{Annex SL} rafforza questa centralità, rendendo la sicurezza parte integrante del governo aziendale e facilitandone 
+l’integrazione con gli altri sistemi di gestione\footcite{uni-harmonized-structure}.
+
+Dal punto di vista dei processi, la certificazione implica l'adozione di meccanismi di valutazione delle prestazioni, audit e riesame della direzione (clausole 9.1--9.3), 
+che costituiscono un feedback periodico sull'efficacia delle misure di sicurezza e i rischi da monitorare\footcite[pp. 8--9]{iso27001}\footcite[p. 2]{mcintosh}. 
+Tali attività sono strumenti chiave per rafforzare anche l'accountability e il monitoraggio da parte del management.
+
+La Dichiarazione di Applicabilità (SoA) costituisce un documento cruciale di trasparenza gestionale: collega i rischi individuati con i controlli adottati
+(o esclusi, motivatamente), rendendo possibile al top management e agli auditor verificare la coerenza della strategia di sicurezza\footcite[pp. 4--5]{iso27001}.
+In questo senso, l'\textit{Annex A} non rappresenta un insieme prescrittivo, ma un repertorio di misure da selezionare in base al profilo di rischio aziendale, 
+responsabilizzando il top management nella definizione delle priorità per il SGSI da certificare\footcite[pp. 15--16]{watkins-iso}.
+
+La certificazione impone anche requisiti in materia di competenze, consapevolezza e comunicazione (clausole 7.2--7.4), che richiedono programmi di formazione, 
+definizione chiara dei ruoli e processi di comunicazione interna ed esterna sulla sicurezza\footcite[p. 6]{iso27001}. Questo favorisce lo 
+sviluppo di una cultura aziendale della sicurezza, base della promozione di buone pratiche di igiene informatica.
+
+Un ulteriore aspetto riguarda il miglioramento continuo (clausola 10), che formalizza la necessità di adattare politiche e controlli a nuove minacce 
+e cambiamenti di contesto\footcite[p. 10]{iso27001}. Qui ISO sottolinea l'importanza di ripetere periodicamente i processi di
+esame dei rischi e delle minacce, e di pianificazione delle misure necessarie, suggerendo quindi un ciclo di sicurezza aziendale, pur senza formalizzarlo.
+
+ISO 27001 diventa così una leva manageriale per rendere tracciabili le decisioni sulla sicurezza, aumentare la fiducia degli stakeholder e sostenere la 
+reputazione aziendale\footcite[p. 7]{watkins-iso}, oltre a fornire una metodologia strutturata per affrontare le minacce cyber. 
+In prospettiva, la combinazione tra standardizzazione, audit e reporting facilita anche la dimostrazione di adempimento rispetto agli obblighi normativi, 
+ben integrandosi con la Direttiva NIS2\footcite{enisa-implementing-guidance}\footcite{clusit-report}.
+
+
+
+% 2.2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{NIST Cybersecurity Framework 2.0}
+
+\subsection{Scopi e struttura del framework}
+Il \textit{NIST Cybersecurity Framework} (CSF), a cura del \textit{National Institute of Standards and Technology} (NIST), nasce nel 2014
+con l’obiettivo di migliorare la protezione delle infrastrutture critiche negli Stati Uniti. La nuova versione 2.0, 
+pubblicata nel febbraio 2024, amplia la portata del framework, rendendolo uno strumento utilizzabile a livello 
+internazionale e per organizzazioni di ogni dimensione e settore\footcite[p. 1]{nist-csf}. Il NIST CSF, come l’ISO 27001, 
+è uno dei framework di cybersicurezza più diffusi a livello globale, grazie alla sua capacità di adattamento a diversi settori 
+e alla funzione di ponte tra aspetti tecnici e manageriali\footcite[p. 1]{mcintosh}.
+
+La struttura del CSF si articola in tre componenti principali:
+\begin{itemize}
+    \item \textbf{Core}, il nucleo del framework, che raccoglie un insieme di \textit{outcome} organizzati in Funzioni, 
+    Categorie e Sottocategorie. In particolare, sono individuate sei funzioni principali: 
+    \textit{Govern}, \textit{Identify}, \textit{Protect}, \textit{Detect}, \textit{Respond}, \textit{Recover}\footcite[p. 5]{nist-csf} (Fig. \ref{fig:funzioni-nist}). 
+    \item \textbf{Organizational Profiles}, che descrivono lo stato attuale e quello target del posizionamento di sicurezza 
+    di un’organizzazione, consentendo di confrontare i gap e pianificare il miglioramento\footcite[p. 6]{nist-csf}.  
+    \item \textbf{Tiers}, che rappresentano i livelli di maturità nella gestione del rischio, utili per 
+    valutare la capacità dell’organizzazione di integrare la cybersecurity nei processi decisionali e culturali\footcite[p. 7]{nist-csf}.  
+\end{itemize}
+
+\defaultimage{nist-fig2}{Funzioni del framework NIST CSF 2.0\footcite[Fig. 2]{nist-csf}}{fig:funzioni-nist}
+
+Lo scopo principale del CSF è fornire un modello flessibile che consenta alle imprese di 
+gestire i rischi informatici in modo sistematico e integrato con gli altri rischi caratteristici del business\footcite[p. 2]{nist-csf}.
+Un'organizzazione può infatti utilizzare gli elementi Core, Profiles e Tiers per\footcite[pp. 1--2]{nist-csf}:
+\begin{itemize}
+    \item descrivere la postura di cybersicurezza attuale o target di una parte o dell’intera organizzazione, determinare i gap e 
+    valutare i progressi nel loro superamento;
+    \item identificare, organizzare e dare priorità alle azioni per la gestione dei rischi di cybersicurezza in modo coerente con la missione 
+    dell’organizzazione, i requisiti legali e regolamentari, nonché le aspettative di gestione del rischio e di governance;
+	\item fornire un linguaggio comune per comunicare, all’interno e all’esterno dell’organizzazione, in merito a rischi di 
+    cybersicurezza, capacità, esigenze ed aspettative.
+\end{itemize}
+Inoltre, il CSF 2.0 rafforza l’attenzione alla supply chain, riconosciuta come uno dei vettori di rischio più critici 
+nello scenario contemporaneo\footcite{nist-csf}, suggerendo una metodologia strutturata per la comunicazione in
+ambito di \textit{Third Party Risk Management}.
+
+Dunque, a differenza di ISO, che stabilisce requisiti certificabili per quanto concerne la creazione, la 
+documentazione e il mantenimento di un Sistema di Gestione per la Sicurezza delle Informazioni, il 
+NIST CSF adotta un approccio più ampio, definendo misure di sicurezza sulla base di \textit{outcome} 
+desiderati\footcite[pp. 3--4]{nist-csf} per quanto concerne tutti gli aspetti della cybersicurezza aziendale.
+
+
+\subsection{Approccio basato sul rischio e implementazione}
+La gestione del rischio si articola attraverso il CSF Core, che raccoglie sei funzioni principali: 
+\textit{Govern}, aggiunta nella versione 2.0 del CSF,
+\textit{Identify}, \textit{Protect}, \textit{Detect}, \textit{Respond} e \textit{Recover}\footcite[p. 5]{nist-csf} (Fig. \ref{fig:funzioni-nist}). 
+Esse sono organizzate in categorie e sottocategorie, contenute nell'Appendice A del framework,
+che traducono gli obiettivi generali delle funzioni in risultati precisi e misurabili, che le aziende
+implementano mediante controlli di sicurezza.
+\begin{itemize}
+    \item \textit{Govern} enfatizza la necessità di collegare la cybersecurity alla governance aziendale, 
+    integrando la gestione del rischio informatico con la strategia complessiva dell’impresa\footcite[p. 8]{nist-csf}.
+    \item \textit{Identify} si concentra sulla conoscenza del contesto organizzativo, degli asset critici e delle 
+    dipendenze, al fine di valutare correttamente le minacce.
+    \item \textit{Protect} è invece orientata all’implementazione di misure preventive, 
+    come il controllo degli accessi, la protezione dei dati e la formazione del personale.
+    \item \textit{Detect} ha lo scopo di sviluppare capacità di monitoraggio e di individuazione tempestiva 
+    di eventi e anomalie di sicurezza.
+    \item \textit{Respond} definisce le modalità di gestione degli incidenti, dalla comunicazione alla mitigazione.
+    \item \textit{Recover} garantisce il ripristino delle capacità operative e l’attivazione di meccanismi di 
+    miglioramento post-incidente, rafforzando la resilienza organizzativa.
+\end{itemize}
+
+Accanto al Core, il framework prevede due strumenti fondamentali di implementazione: i 
+\textit{Profiles} e gli \textit{Implementation Tiers}. I \textit{Profiles} descrivono lo stato attuale e lo stato 
+target della postura di sicurezza di un’organizzazione, consentendo di individuare le carenze nei confronti dell'obiettivo desiderato e 
+pianificare un percorso di miglioramento\footcite[p. 6]{nist-csf}. I \textit{Tiers}, articolati in quattro livelli 
+(dal \textit{Partial} all’\textit{Adaptive}), rappresentano invece la maturità dei processi di gestione del rischio 
+e la capacità di integrazione della cybersecurity nei processi decisionali e culturali. Pur non essendo 
+certificativi, rappresentano validi strumenti di autovalutazione per l'azienda\footcite[p. 7]{nist-csf}. 
+
+L’implementazione pratica del CSF attraversa ciclicamente cinque fasi: 
+\begin{enumerate}
+    \item comprensione del contesto e della missione aziendale;
+    \item definizione dei profili e analisi dei gap;
+    \item prioritizzazione degli interventi sulla base del rischio e delle risorse disponibili;
+    \item applicazione delle misure individuate;
+    \item monitoraggio e revisione continua.
+\end{enumerate}
+
+Dunque, come avviene con il modello PDCA tipico degli standard ISO, il processo mantiene una logica di miglioramento 
+continuo, volta ad adattare le misure a minacce e tecnologie in evoluzione.
+
+Il \textit{NIST Cybersecurity Framework}, nonostante la non certificabilità a differenza di ISO,
+è oggi ampiamente diffuso a livello globale grazie alla sua 
+capacità di fungere da punto di raccordo tra aspetti tecnici e manageriali\footcite[p. 3]{mcintosh}. 
+Un altro punto di forza risiede nella flessibilità: i vari documenti di supporto pubblicati dal NIST per 
+l’implementazione del framework vengono aggiornati con regolarità, consentendo di adeguare le misure 
+di sicurezza all’evoluzione delle minacce e del contesto tecnologico.
+Parmar e Miles ne sottolineano la crescente rilevanza in ambito europeo, dove è sempre 
+più utilizzato come riferimento di \textit{best practice} e come base per la mappatura con la Direttiva 
+NIS2\footcite[p. 12]{parmar-miles-csf}.
+
+
+\subsection{Implicazioni organizzative dell'adozione del NIST CSF 2.0}
+Dal punto di vista organizzativo, il NIST CSF definisce un processo di gestione e trattamento del rischio
+ciclico. Matteo Herin osserva come le funzioni del framework siano rappresentate secondo un cerchio, alla cui base si colloca la 
+funzione di governo e intorno alla quale si susseguono le altre. Il primo step è rappresentato 
+dall'identificazione delle minacce, per poi procedere con l'implementazione delle protezioni necessarie.
+Le funzioni successive entrano in gioco in caso di attacco, con il monitoraggio attivo e
+la risposta a eventuali attacchi tramite i playbook codificati per contenere ed estirpare l'ostilità.
+Infine, avviene il recupero dall'incidente con il ripristino delle normali funzioni, per poi ricominciare
+il ciclo dalla funzione \textit{Identify} sulla base della \textit{lesson learned} ricavata
+dall'analisi degli eventi.
+
+Un'attenzione particolare deve essere rivolta alla funzione \textit{Govern}, i cui obiettivi risultano 
+coerenti con le priorità individuate dagli enti europei\footcite[Allegato B]{enisa-threat-landscape}.
+Essa evidenzia la necessità di un coinvolgimento esplicito della 
+direzione nella definizione delle strategie di sicurezza, nella distribuzione 
+delle responsabilità e nella supervisione dei processi di gestione del rischio\footcite[Appendice A]{nist-csf}. 
+In questo senso, il CSF si propone come strumento per rafforzare il legame tra obiettivi 
+strategici e misure operative, rendendo la sicurezza informatica parte integrante della strategia aziendale.
+
+L’utilizzo dei \textit{Profiles} e dei \textit{Tiers} consente al management 
+di valutare lo stato di maturità della propria postura di sicurezza e di stabilire priorità di 
+investimento. Ciò fornisce ai CISO uno strumento di dialogo con il vertice 
+aziendale, facilitando la traduzione dei rischi tecnici in rischi di business e la pianificazione di 
+roadmap di progresso\footcite{parmar-miles-csf}. Il framework diventa così anche un 
+mezzo di comunicazione strategica, utile a colmare il divario tra linguaggio tecnico e 
+decisioni manageriali, rendendo più efficace e diretta la comunicazione in materia di cybersicurezza.
+
+L’adozione del CSF stimola inoltre la diffusione di una cultura organizzativa del rischio, 
+favorendo la sensibilizzazione del personale, l’assegnazione di ruoli chiari e la creazione di 
+processi di feedback continui. La sua implementazione rafforza la resilienza aziendale e contribuisce alla dimostrazione di 
+\textit{due diligence}, aspetto particolarmente rilevante in un contesto regolatorio come quello 
+della Direttiva NIS2, che richiede alle organizzazioni di integrare la cybersecurity nella propria 
+struttura di governance\footcite[pp. 110--115]{enisa-threat-landscape}. 
+Il framework si configura dunque come un supporto essenziale per l’IT Manager, chiamato a guidare 
+l'implementazione delle linee guida NIST attraverso misure concrete.

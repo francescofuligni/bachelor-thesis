@@ -1,0 +1,306 @@
+\chapter{Analisi comparativa tra standard internazionali per l'adempimento di NIS2}
+\label{cap:confronto}
+
+% 3.1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduzione al confronto}
+\subsection{ISO 27001, NIST CSF 2.0 e NIS2}
+In questo capitolo dell'elaborato si svolge un confronto tra i framework presentati,
+ISO 27001 e NIST CSF 2.0, e la Direttiva NIS2, con l'obiettivo di comprendere quale
+ruolo essi possano avere nel soddisfare i requisiti stabiliti dal legislatore europeo.
+
+L'analisi comparativa si basa sul confronto tra gli articoli NIS2 dal 20 al 25, le misure stabilite 
+da ISO 27001 e le funzioni e i controlli del NIST CSF 2.0.
+Il NIST CSF 2.0 e ISO 27001 presentano numerosi obiettivi comuni, ma possiedono differenze
+significative nella struttura e nell'approccio adottati. Come evidenziato nella 
+prassi di riferimento UNI/PdR 174, ISO 27001 ha un'impostazione sistemica ed è
+strutturata a requisiti, in modo da consentire all'organizzazione la certificazione 
+accreditata di un proprio SGSI. Il NIST CSF 2.0, invece, rappresenta uno strumento
+per valutare e potenziare il proprio profilo di cybersicurezza in relazione al rischio
+cui si è esposti. Di conseguenza, non tutti i controlli di ISO trovano una corrispondenza
+in NIST CSF 2.0 e viceversa\footcite{uni-pdr174}. Tali divergenze emergono anche nel 
+confronto con la Direttiva NIS2.
+
+
+\subsection{Framework di cybersicurezza nazionali}
+Un ruolo importante nell'adozione di NIS2 è ricoperto dai framework per la cybersicurezza varati
+dagli Stati membri a livello nazionale. Le direttive europee, come visto, necessitano di un recepimento
+nazionale per entrare in vigore e i singoli organi di governo in tale fase possono introdurre
+ulteriori specifiche e modifiche alle misure stilate dall'Unione. In questo modo, si ottengono molteplici
+derivazioni nazionali di NIS2, ognuna delle quali interpreta e rafforza la normativa in maniera leggermente
+differente\footcite[p. 5]{parmar-miles-csf}, il che costringe le imprese multinazionali ad
+adattare le proprie procedure per soddisfare i requisiti specifici per più nazioni\footcite[p. 18]{ecso-whitepaper-nis2}.
+
+In questo contesto, è interessante notare come gli Stati membri incorporano gli standard internazionali
+come NIST e ISO nel recepimento di NIS2, creando così framework nazionali ibridi.
+Un approccio degno di nota è quello del Belgio, in cui la certificazione ISO 27001 è considerata
+equivalente a soddisfare gli standard NIS2\footcite[p. 4]{ecso-whitepaper-nis2}. Altri Paesi, invece,
+hanno sviluppato i propri framework nazionali a partire da quelli ISO e NIST. Tra essi vi è l'Italia,
+che ha creato il \textit{Framework Nazionale per la Cybersecurity e la Data Protection} sulla 
+base dell'adattamento del NIST CSF al contesto locale.
+
+Il riconoscimento di framework esistenti come equivalenti a NIS2 rappresenta una
+misura a grandissimo vantaggio delle aziende. Viste le numerose sfide nell'implementazione
+di NIS2, esaminate nel Capitolo \ref{cap:nis2}, ciò porterebbe ad una considerevole riduzione
+degli sforzi richiesti alle imprese, a vantaggio delle aziende più piccole e di chi 
+già ha operato investimenti strategici in standard specifici\footcite[p. 8]{ecso-whitepaper-nis2}. 
+Tuttavia è necessario riflettere sugli effetti a lungo e breve termine di una misura
+di questo tipo. Infatti, se l'impatto sulle risorse aziendali nel breve termine è sicuramente
+positivo, sul lungo periodo si individuano due potenziali rischi:
+\begin{itemize}
+    \item Lasciare agli Stati membri l'onere di stabilire quale framework riconoscere come
+    valido porterebbe a un'ulteriore frammentazione delle metodologie di cybersicurezza aziendali,
+    vanificando l'obiettivo di unificazione alla base di NIS2.
+    \item Stabilire in maniera univoca un framework come equivalente a NIS2 porterebbe da un lato
+    alla creazione di un monopolio di un unico ente certificatore e dall'altro all'accantonamento
+    di NIS2, rendendola di fatto superflua.
+\end{itemize}
+Una strada percorribile potrebbe essere rappresentata dalla scelta di alcuni standard temporaneamente
+equivalenti a NIS2, in modo da favorire le imprese che già li adottano e ridurre l'impatto
+sulle risorse per l'implementazione delle misure di sicurezza, nell'ottica di un progressivo
+adattamento ai requisiti NIS2. Ciò necessita della creazione di strumenti di mappatura dedicati
+tra gli standard e NIS2\footcite[pp. 7--9]{ecso-whitepaper-nis2}, iniziativa a cui questo capitolo
+ambisce a contribuire.
+
+Un'altra soluzione di natura opposta è rappresentata dalla creazione di un unico framework di cybersicurezza 
+europeo, proseguendo quindi nella direzione tracciata dal legislatore con NIS2, corredato da
+framework per la gestione del rischio e della sicurezza della \textit{supply chain}, con l'obiettivo di
+ridurre al minimo la frammentazione\footcite[pp. 4--6]{parmar-miles-csf}\footcite[pp. 7--9]{ecso-whitepaper-nis2}
+e di accorpare in esso le disposizioni derivanti anche da altre normative rilevanti, quali GDPR e DORA.
+
+
+\subsection{Tabella comparativa}
+In questo capitolo il confronto è condotto con un’impostazione teorico–argomentativa: si chiariscono criteri, affinità e differenze tra NIS2, 
+ISO/IEC 27001 e NIST CSF 2.0. A supporto e verifica di tale analisi, nel Capitolo \ref{cap:mapping} è riportata una tabella di mappatura che 
+delinea l'allineamento delle misure prescritte dall'Art. 21 della Direttiva NIS2 con gli obiettivi esposti nell'allegato del framework NIST
+e i controlli dell'\textit{Annex A} di ISO 27001.
+La tabella traduce quanto discusso di seguito in evidenze implementative, consentendo di leggere sia il posizionamento dei singoli standard 
+rispetto a NIS2 sia il potenziale effetto combinato nel percorso di attuazione.
+
+
+
+% 3.1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Allineamento di ISO 27001 con NIS2}
+
+\subsection{Convergenze}
+La certificazione ISO 27001 è, come detto, tra le più adottate dalle aziende, con più di 40.000 certificazioni rilasciate a livello 
+mondiale\footcite[p. 2]{mcintosh}. Essa garantisce evidenti vantaggi alle aziende rispetto agli 
+adempimenti richiesti da NIS2, fornendo una solida struttura per la governance della cybersicurezza dell'azienda e l'adozione di 
+controlli di sicurezza sui sistemi informatici\footcite[p. 35]{ecso-whitepaper-nis2}.
+
+Un primo elemento di convergenza tra la Direttiva NIS2 e lo standard ISO/IEC 27001:2022 riguarda la centralità della governance e del ruolo del top management.
+ISO impone alla direzione aziendale obblighi espliciti in materia di leadership, definizione delle policy e attribuzione di ruoli e responsabilità 
+(clausole 5.1--5.3), che trovano un diretto parallelo in NIS2\footcite[artt. 20--21]{nis2-directive}, dove la responsabilità 
+ultima della sicurezza informatica è attribuita agli organi societari.
+Questo aspetto rende lo standard utile a strutturare la governance dell'azienda, fornendo un'organizzazione dettagliata, producendo documentazione
+utile a certificare l'adozione di misure di cybersicurezza e facilitando l’accountability anche in ambito NIS2\footcite[pp. 56--58]{kouns-ciso}\footcite[p. 35]{ecso-whitepaper-nis2}, 
+come sostenuto anche dai CISO intervistati.
+
+Un secondo punto riguarda l'approccio alla gestione del rischio. ISO 27001 prevede un processo strutturato di valutazione e trattamento del rischio 
+(clausole 6.1.2--6.1.3), ciclicamente riesaminato e aggiornato. Tale approccio è coerente con l’impostazione 
+\textit{risk-based} di NIS2, che richiede analisi periodiche delle minacce e adeguamento delle misure di sicurezza\footcite[art. 21(2)]{nis2-directive}. 
+La prassi UNI/PdR 174 sottolinea come l’adozione di ISO permetta di armonizzare le attività di \textit{risk assessment} con i requisiti operativi 
+derivanti da NIS2\footcite[p. 9]{uni-pdr174}, costruendo una base per le attività di cybersicurezza fortemente improntata all'individuazione, 
+alla valutazione e alla gestione del rischio.
+
+Inoltre, i controlli operativi di ISO coprono altre aree chiave previste dalla direttiva. Le misure sulla gestione degli incidenti (A.5.24--A.5.28), 
+il monitoraggio continuo (A.8.16) e le pratiche di \textit{threat intelligence} (A.5.07) trovano corrispondenza con le prescrizioni NIS2 sulla rilevazione, 
+risposta e notifica degli incidenti. Anche le misure di continuità e ripristino (A.5.29--A.5.30, A.8.13--A.8.14) sono 
+in linea con gli obblighi di \textit{business continuity} e \textit{disaster recovery} richiesti dalla direttiva\footcite[p. 5]{ecso-whitepaper-nis2}.
+
+Le convergenze non si limitano agli aspetti tecnici, ma si estendono anche alla cultura organizzativa. ISO 27001 valorizza la formazione del personale (A.6.3) 
+e la consapevolezza in materia di sicurezza, aspetti richiamati anche da NIS2 che introduce obblighi di istruzione e informazione,
+oltre che di responsabilità.
+
+Infine, i CISO intervistati spiegano come la motivazione principale per cui le aziende decidono di adottare ISO rimanga la certificabilità
+delle misure. In questo modo, l'azienda dispone da un lato di un SGSI chiaro e ben strutturato e 
+dall'altro di un valido strumento di accountability, ossia il certificato e tutti i documenti di monitoraggio
+che ISO richiede. Questo permette di dimostrare, laddove un auditor esterno o il regolatore necessitino di verificare la conformità
+dell'azienda ai requisiti, la bontà del sistema di gestione della sicurezza oggetto del controllo.
+
+
+\subsection{Divergenze}
+Pur essendo spesso reputata un punto di partenza essenziale per la compliance NIS2, il CISO di Prometeia precisa che 
+la certificazione ISO 27001 non è completamente sovrapponibile alla direttiva.
+
+In primo luogo, ISO non si applica ai sistemi dell'azienda in maniera integrata, ma il suo perimetro
+è rappresentato da un singolo SGSI. L'azienda, spiega il CISO di Carrefour Italia, può decidere in seguito di certificare tutti i suoi SGSI oppure,
+come spesso avviene, solamente quelli considerati più critici in relazione al profilo di rischio.
+Al contrario, NIS2 interessa tutta l'azienda e i suoi sistemi di sicurezza per intero, essendo l'applicabilità
+non volontaria, ma stabilita dal legislatore in base alla classificazione del soggetto come
+\textit{essenziale} o \textit{importante}. Verosimilmente, dunque, molte aziende che adottano
+ISO solo sui sistemi critici devono integrare misure ulteriori anche in aree che non dispongono di controlli informatici sufficienti.
+
+Un tema importante della certificazione ISO, evidenziato dai CISO intervistati, è il fatto che ISO consenta di certificare misure di sicurezza, ma non 
+garantisca l’efficacia sostanziale dei controlli in ottica NIS2.
+ISO infatti adotta un approccio basato sul rischio, che lascia all’organizzazione la scelta dei controlli più adeguati in base al livello di rischio 
+che l'azienda stessa ha ritenuto accettabile in relazione alle procedure di \textit{risk assessment} svolte. 
+NIS2, al contrario, introduce istanze più prescrittive, rendendo di fatto obbligatorie alcune misure -- salvo motivata giustificazione. 
+L'obiettivo di NIS2 è infatti quello di fornire alle imprese delle misure minime di resilienza,
+ritenute indispensabili in relazione al livello di rischio dell'organizzazione all'interno 
+del sistema Paese, richiedendo, come spiega Herin, una valutazione del rischio improntata su aspetti più concreti e non strettamente formali.
+In questo senso, NIS2 ha un obiettivo più ampio e più operativo, imponendo la necessità di testare periodicamente
+l'efficacia dei \textit{playbook} e delle misure di contrasto alle minacce, mentre ISO si concentra principalmente
+sull'adozione formale dei controlli senza preoccuparsi dell'efficacia degli stessi in fase di audit.
+
+Un’altra divergenza dovuta alla natura regolatoria di NIS2 riguarda gli obblighi di notifica. ISO 27001 prevede processi di gestione degli incidenti e di reporting interno (A.5.24--A.5.28), 
+i quali possono fornire da supporto, ma non impone scadenze stringenti né modalità di comunicazione verso autorità esterne. 
+NIS2 stabilisce invece tempistiche tramite KPI precisi per l'informazione delle autorità competenti in caso di incidenti significativi\footcite[art. 23]{nis2-directive}.
+Questo comporta per le aziende certificate ISO la necessità di integrare playbook e workflow dedicati per garantire la compliance normativa, integrando
+la documentazione e le procedure interne già implementate con ISO.
+
+Si rileva anche una discostamento nella definizione delle responsabilità del top management. ISO si limita a richiedere leadership e impegni formali (clausole 5.1--5.3), 
+mentre NIS2 introduce responsabilità dirette e, in alcuni casi, sanzioni personali a carico degli amministratori in caso di mancata adozione delle misure 
+adeguate\footcite[art. 20]{nis2-directive}, richiedendo un coinvolgimento più attivo e sostanziale del management nella supervisione della cybersicurezza.
+
+Infine, sia NIS2 che ISO/IEC 27001 pongono attenzione alla supply chain security, ma in modo differente. 
+ISO fornisce strumenti per formalizzare controlli e verifiche lungo la catena del valore (A.5.19--A.5.20), mentre NIS2 rende questo obbligo 
+cogente e sanzionabile, richiedendo ancora una volta controlli effettivi più stringenti, attribuendone la 
+responsabilità a ogni soggetto NIS2\footcite[art. 21]{nis2-directive}.
+
+
+\subsection{Ruolo nell'implementazione di NIS2}
+Ai fini dell'adozione di NIS2, ISO 27001 si configura come uno strumento di governo manageriale, capace di introdurre responsabilità
+e accountability nella gestione della sicurezza informatica, aiutando le aziende a:
+\begin{itemize}
+    \item creare un SGSI strutturato e manutenibile;
+    \item disporre di obiettivi di controllo solidi;
+    \item produrre documentazione per auditor esterni.
+\end{itemize}
+Lo standard abilita quindi le imprese a sviluppare capacità organizzative e processi di 
+gestione del rischio verificabili, trovando numerose corrispondenze nella Direttiva NIS2, ma non coincide con la piena conformità normativa: 
+per i CISO, rappresenta un abilitatore che necessita inevitabilmente di integrazioni da individuare tramite la conduzione di una 
+\textit{gap analysis} tra le misure implementate dall'azienda e gli obblighi di legge.
+
+Il vantaggio principale che introduce ISO è la disponibilità di un certificato rilasciato da un auditor ISO che verifica 
+l'impegno da parte dell'azienda nell'adozione di misure a tutela della sicurezza informatica. Tuttavia, ciò non dimostra la completa
+aderenza alla normativa: la certificazione ISO 27001 rappresenta un metodo per le aziende di dimostrare accountability laddove un auditor NIS2 
+richieda di verificare le misure in essere, ma si dimostra carente nel fissare un livello di sicurezza effettiva coerente con le richieste di NIS2.
+In particolare, spiegano i CISO interpellati, ISO 27001 certifica l'adozione di determinati strumenti di sicurezza e di documentazione da un punto 
+di vista formale, mentre la vocazione di NIS2 è più operativa e richiede controlli sostanziali. 
+
+Infine, è necessario riflettere sul diverso obiettivo di NIS2 e ISO 27001. La capacità di ISO di fornire una struttura ben definita per la
+governance della cybersicurezza e l'implementazione di controlli sui sistemi di gestione della sicurezza informatica è un punto di forza 
+nella transizione verso NIS2. Tuttavia, la direttiva europea include obblighi più stringenti, come il controllo della \textit{supply chain}
+e gli obblighi di notifica in caso di incidenti. 
+
+Michele Rivieri osserva inoltre la possibilità di integrare ISO 27001
+con altri standard ISO, come il 27701 per la gestione delle informazioni sulla privacy e il 22301 per la gestione della
+\textit{business continuity}, i quali contengono a loro volta elementi abilitanti alla compliance della direttiva.
+Secondo ENISA\footcite{enisa-implementing-guidance}, invece, altri standard rilevanti sono:
+\begin{itemize}
+    \item ISO 22313:2020 e ISO 22301:2019 per misure di continuità operativa;
+    \item ISO 22361:2022 per controlli inerenti a sicurezza, resilienza e gestione delle crisi;
+    \item ISO 21500:2020 e ISO 21500:2021 per la gestione di progetti, programmi e portfolio.
+\end{itemize}
+
+
+
+% 3.2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Allineamento del NIST CSF 2.0 con NIS2}
+
+\subsection{Convergenze}
+Il NIST CSF 2.0 e NIS2 condividono una forte base contenutistica. Entrambi nascono, seppur in contesti differenti,
+con l'obiettivo di fornire linee guida minime per la cybersicurezza e la resilienza informatica
+e di contribuire allo sviluppo di un programma di cybersecurity nelle organizzazioni.
+
+Una caratteristica comune tra NIST CSF e NIS2 è che entrambi richiedono artefatti attuativi. 
+Il primo, infatti, è presentato come un insieme di \textit{best practices} che necessitano di una creazione
+di un \textit{action plan} dedicato. La seconda, invece, deve essere codificata in un framework di cybersicurezza
+a livello di ogni singolo Stato membro; sarà poi tale framework che le singole imprese utilizzeranno per derivare
+il proprio, adattandolo alle esigenze specifiche del contesto\footcite{parmar-miles-csf}. Alternativamente, le imprese possono implementare
+direttamente NIS2 nel proprio framework aziendale, ma con alcune implicazioni di cui si discute più avanti.
+
+NIS2 e il NIST CSF riconoscono la governance come un costituente essenziale della strategia aziendale e della
+gestione della sicurezza informatica nelle organizzazioni. La gestione dei processi, della tecnologia e delle 
+risorse umane è infatti un elemento fondante delle misure prescritte dalle due fonti. All'interno della funzione
+\textit{Govern} del NIST CSF trovano corrispondenza gli obblighi fissati da NIS2 per quanto riguarda\footcite[p. 4]{parmar-miles-csf}:
+\begin{itemize}
+    \item la creazione di una strategia di cybersicurezza uniforme, per favorire l'allineamento delle organizzazioni;
+    \item la designazione di un punto di contatto all'interno delle organizzazioni, referente deputato alla gestione delle comunicazioni
+    di cybersicurezza;
+    \item la sicurezza della \textit{supply chain}, tramite la regolazione e il monitoraggio delle interazioni con entità parte 
+    della catena del valore e la gestione degli incidenti che si possono verificare lungo essa.
+\end{itemize}
+
+Il ciclo delle funzioni del NIST CSF si svolge a partire dalla funzione \textit{Identify}. Qui trovano spazio le misure
+relative alla gestione degli asset, l'identificazione delle vulnerabilità, il tracciamento delle informazioni di \textit{threat 
+intelligence}, necessarie all'adempimento della Direttiva NIS2\footcite[p. 4]{parmar-miles-csf}.
+
+Anche la funzione \textit{Protect} mostra un allineamento con NIS2, stabilendo controlli di sicurezza nelle aree di protezione
+dei dati trasmessi, gestione delle identità digitali e specifici requisiti come l'autenticazione a due fattori e gli obblighi di
+formazione delle risorse umane nell'ambito cyber\footcite[p. 4]{parmar-miles-csf}.
+
+Per quanto riguarda le funzioni NIST inerenti alla protezione dalle minacce e al recupero da situazioni di crisi informatica,
+il CSF e NIS2 continuano a dimostrarsi coerenti. \textit{Protect}, \textit{Respond} e \textit{Recover} forniscono misure che 
+permettono all'organizzazione di strutturare una metodologia operativa per adempiere alle richieste del legislatore nei seguenti ambiti\footcite[p. 4]{parmar-miles-csf}:
+\begin{itemize}
+    \item predisposizione al dialogo con il CSIRT nazionale e le autorità in caso di incidenti significativi o di eventi di sicurezza informatica;
+    \item necessità di sviluppare un \textit{Business Continuity Plan} (BCP) per codificare le procedure da adottare in caso di incidente 
+    garantendo le funzionalità minime necessarie all'operatività dell'azienda;
+    \item necessità di sviluppare un \textit{Disaster Recovery Plan} (DRP) per strutturare le operazioni per il ripristino della normale
+    condizione di operatività in seguito a un incidente o un'interruzione grave dei servizi.
+\end{itemize} 
+
+
+\subsection{Divergenze}
+Nonostante i numerosi punti di contatto, NIS2 e il NIST CSF presentano anche elementi di divergenza.
+
+Il NIST CSF 2.0 è un framework creato dal \textit{National Institute of Standards and Technology} (NIST),
+istituzione parte del governo degli Stati Uniti d'America. Per questo motivo, è strutturato sulla base del 
+contesto americano, ma la sua struttura si adatta bene alle organizzazioni di tutto il mondo\footcite[pp. 1--3]{parmar-miles-csf}.
+Al contrario, NIS2 è una direttiva dell'Unione Europea, pensata per l'applicazione nel contesto europeo. 
+
+NIS2 pone infatti grande attenzione alla collaborazione a livello internazionale e alla condivisione di informazioni
+riguardanti gli eventi di sicurezza informatica. L'idea alla base di tali misure è figlia della volontà del legislatore europeo di creare 
+una community di esperti cyber per favorire l'innovazione e il progresso della sicurezza nelle organizzazioni, anche al di là dei confini 
+nazionali. Ciò si presta particolarmente all'ecosistema europeo, individuando la necessità di ridurre la frammentazione e creare un fronte 
+internazionale comune contro le minacce informatiche, vocazione che invece non si evince esplicitamente dal NIST CSF 2.0\footcite[p. 4]{parmar-miles-csf}.
+Inoltre, data la sua natura regolatoria, NIS2 introduce un livello di specificità superiore per l'attuazione di determinate 
+modalità operative rispetto a quanto avviene nel framework NIST. Si evidenzia infatti la presenza di precisi KPI 
+(\textit{Key Performance Indicator}) fissati dal regolatore UE per la definizione di soglie precise per la gestione e la 
+notifica degli incidenti alle autorità\footcite[p. 5]{parmar-miles-csf}, indicatori non previsti dal NIST.
+
+Inoltre, le differenze strutturali riguardano anche la modalità con cui NIS2 e NIST CSF prescrivono le proprie misure.
+Mentre il NIST CSF è un framework volontario e perciò l'adesione alle misure presentate è lasciata alla discrezione delle
+aziende, NIS2 si configura come un insieme di obblighi a cui i soggetti interessati devono attenersi con rigore per dimostrare
+il proprio adempimento e non incorrere in sanzioni (non previste nel caso del NIST CSF)\footcite[p. 4]{parmar-miles-csf}.
+
+Un'ulteriore differenza fondamentale tra NIS2 e NIST CSF risiede nella modalità di implementazione. 
+Seppur entrambi abbiano una vocazione fortemente operativa, superiore a ISO 27001, necessitano come visto di un ulteriore raffinamento per l'applicazione diretta.
+Perciò il NIST suggerisce lo sviluppo di un piano d'azione che stabilisca i KPI (non presenti nel framework) e gli indicatori di rischio
+utili alla valutazione delle misure da implementare sulla base delle vulnerabilità individuate. 
+Al contrario, il processo di adozione di NIS2 può essere più complesso e rappresentare una sfida notevole, soprattutto per le 
+organizzazioni con un livello di maturità dei sistemi di sicurezza inferiore. Per affrontare questo processo, 
+può essere utile l'adozione di uno (o più) framework che forniscano una struttura solida su cui basare la strategia di sicurezza informatica\footcite{parmar-miles-csf}.
+
+Infine, i CISO ascoltati concordano nell'individuare limite del framework NIST nella mancanza di una forma di certificazione riconosciuta delle misure implementate. 
+Ciò riduce la rilevanza del CSF, rispetto a ISO 27001, nel dimostrare accountability per le misure di sicurezza informatiche, spingendo le aziende ad adottare
+il NIST CSF solo parzialmente come strumento di supporto, data la grande coerenza con NIS2, ma senza la necessità di implementarlo nella sua interezza.
+
+
+\subsection{Ruolo nell'implementazione di NIS2}
+Viste le numerose analogie tra il framework NIST e NIS2 è evidente come il primo possa avere un ruolo fondamentale
+nell'adozione della direttiva. Similmente a quanto visto con ISO, il NIST CSF permette alle organizzazioni di strutturare la governance,
+i controlli e le procedure di sicurezza informatica, ottenendo una valida base da completare con gli adempimenti necessari
+stabiliti da NIS2. In quest'ottica, può rappresentare una soluzione utile per aziende con strutture di sicurezza
+informatica più acerbe, che necessitano di un approccio strutturato alle tematiche cyber, ma coadiuvato da integrazioni mirate.
+
+Nella struttura del framework NIST Herin rileva una maggiore vocazione operativa, coerente con NIS2, rispetto allo standard ISO 27001. 
+Nonostante il CSF sia presentato come ciclico, si osserva una divisione netta del framework in due parti:
+\begin{enumerate}
+    \item le funzioni \textit{Identify} e \textit{Protect} definiscono la condizione della sicurezza informatica durante
+    la normale condizione di operatività, costruite sulla funzione \textit{Govern} che definisce la governance aziendale;
+    \item le funzioni \textit{Detect}, \textit{Respond} e \textit{Recover} strutturano invece l'operatività aziendale
+    all'avvenimento di un incidente di sicurezza e alla crisi che ne può derivare. Al raggiungimento dello step \textit{lessons learned}
+    il ciclo si ripete a partire da \textit{Identify} per correggere il governo e le misure implementate sulla base delle analisi
+    svolte sull'attacco subito e delle vulnerabilità individuate.
+\end{enumerate}
+Analogamente, NIS2 definisce sia le misure da implementare in condizioni di normale operatività sia quelle per la gestione
+degli eventi di \textit{security breach}. Secondo il CISO di Carrefour, da questo punto di vista l'approccio NIST è più in linea 
+con NIS2 rispetto a ISO 27001, definendo un insieme di processi utili a gestire operativamente tutti gli scenari cyber in azienda.
+
+Tuttavia, è necessario integrare tali processi con le richieste dell'Unione per quanto 
+riguarda gli obblighi di notifica e relazione con le autorità, non individuati dal NIST. 
+In questo processo, è fondamentale tenere conto degli indicatori di rischio richiesti da NIS2 per identificare quali
+misure siano da implementare in relazione al livello di rischio dell'azienda, nonché dei KPI utili in fase di gestione
+delle emergenze di sicurezza informatica.

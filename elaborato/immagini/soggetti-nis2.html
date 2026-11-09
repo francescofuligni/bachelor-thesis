@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>NIS2 – Soggetti Essenziali vs Importanti</title>
+    <style>
+      :root {
+        --ink: #000;
+        --muted: #4a5b6a;
+        --line: #ccc;
+        --bg: #f8fbff;
+        --head: #4A90E2;
+        --accent: #2563eb;
+        --alt-row: #f7f7f7;
+        --header-text: #fff;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        padding: 32px 0;
+        font: 16px/1.6 "Segoe UI", "Roboto", Arial, sans-serif;
+        color: var(--ink);
+        background: var(--bg);
+      }
+      .card {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+      }
+      table {
+        width: 80%;
+        max-width: 900px;
+        margin: 0 auto;
+        border-collapse: separate;
+        border-spacing: 0;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 16px 0 rgba(44,80,145,0.07);
+        overflow: hidden;
+        border: 1px solid var(--line);
+      }
+      th {
+        background: var(--head);
+        color: var(--header-text);
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 600;
+        text-align: center;
+        letter-spacing: 0.04em;
+        padding: 16px 12px;
+        border: 1px solid var(--line);
+      }
+      td {
+        font-size: 15px;
+        color: var(--ink);
+        padding: 16px 14px;
+        border: 1px solid var(--line);
+        vertical-align: top;
+      }
+      tbody tr:nth-child(even) {
+        background: var(--alt-row);
+      }
+      tbody tr:nth-child(odd) {
+        background: #fff;
+      }
+      td:first-child {
+        font-weight: 600;
+        background: rgba(37,99,235,0.07);
+        border-right: 1px solid var(--line);
+        min-width: 160px;
+        width: 18%;
+      }
+      tr:first-child th:first-child {
+        border-top-left-radius: 8px;
+      }
+      tr:first-child th:last-child {
+        border-top-right-radius: 8px;
+      }
+      tr:last-child td:first-child {
+        border-bottom-left-radius: 8px;
+      }
+      tr:last-child td:last-child {
+        border-bottom-right-radius: 8px;
+      }
+      .table-title {
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--head);
+        text-align: center;
+        margin-bottom: 20px;
+        letter-spacing: 0.02em;
+      }
+      @media (max-width: 1000px) {
+        table { width: 98%; }
+      }
+      @media (max-width: 700px) {
+        table { font-size: 14px; }
+        th, td { padding: 10px 6px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="table-title">NIS&nbsp;2 – Soggetti essenziali e soggetti importanti</div>
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Soggetti essenziali</th>
+            <th>Soggetti importanti</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Settori di attività</td>
+            <td>
+              Energia<br>
+              Trasporti<br>
+              Banche<br>
+              Infrastrutture dei mercati finanziari<br>
+              Sanità<br>
+              Acqua potabile<br>
+              Acque reflue<br>
+              Infrastrutture digitali<br>
+              Gestione dei servizi ICT<br>
+              Pubbliche amministrazioni centrali<br>
+              Spazio
+            </td>
+            <td>
+              Servizi postali e di corriere<br>
+              Gestione dei rifiuti<br>
+              Produzione, trasformazione e distribuzione alimentare<br>
+              Manifatturiero critico<br>
+              Fornitori di servizi digitali<br>
+              Ricerca
+            </td>
+          </tr>
+          <tr>
+            <td>Criteri dimensionali</td>
+            <td>
+              Incluse automaticamente le imprese medie e grandi nei settori indicati.<br>
+              Micro e piccole escluse salvo eccezioni.
+            </td>
+            <td>
+              Incluse automaticamente le imprese medie e grandi nei settori indicati.<br>
+              Micro e piccole escluse salvo eccezioni.
+            </td>
+          </tr>
+          <tr>
+            <td>Supervisione delle autorità</td>
+            <td>
+              Controlli (ex ante) dell’autorità competente.
+            </td>
+            <td>
+              Controlli (ex post) a seguito di incidenti o non conformità.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
