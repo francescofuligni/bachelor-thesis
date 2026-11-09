@@ -1,4 +1,4 @@
-# Bachelor's Thesis — Organizational Implications of the NIS2 Directive
+# Bachelor's Thesis: Organizational Implications of the NIS2 Directive
 
 Francesco Maria Fuligni · University of Bologna · Bachelor's degree in Informatics for Management · Academic year 2024/2025
 
